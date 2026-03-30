@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossroads: STEM Learning Hub Proposal</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Configuration & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Calm, modern palette based on warm neutrals and accessible blues/teals
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Primary accent
+                            600: '#0284c7', // Darker accent
+                            900: '#0c4a6e', // Deep background/text
+                        },
+                        neutral: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+        
+        /* Required Chart Container Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 640px) {
+            .chart-container { height: 250px; }
+        }
+
+        /* Custom Scrollbar for inner containers */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Transition Utilities */
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="antialiased">
+
+<!-- Chosen Palette: Calm Modernity (Warm neutrals: Slate-50 to Slate-800, Accents: Sky Blue-500/600, Teal hints) -->
+<!-- Application Structure Plan: A single-page dashboard format sectioned logically: Hero (Mission), The Vision (Problem/Solution interaction), The Hub (Space & Disciplines exploration), Financials (Charts), and Roadmap (Interactive timeline). This structure transforms a linear academic proposal into a pitch-deck style interactive journey, allowing users (investors, partners, community members) to easily digest complex data, explore the 15 disciplines at their own pace, and clearly visualize the financial and chronological roadmap without scrolling through dense text blocks. -->
+<!-- Visualization & Content Choices: 
+  1. Zones Allocation -> Goal: Proportions -> Viz: Doughnut Chart (Chart.js) -> Justification: Clearly shows spatial priority of the facility.
+  2. Revenue Growth -> Goal: Trend -> Viz: Bar Chart (Chart.js) -> Justification: Highlights the path to sustainability over 3 years.
+  3. Startup Costs -> Goal: Comparison -> Viz: Horizontal Bar Chart (Chart.js) -> Justification: Breaks down the high/low estimates.
+  4. 15 Disciplines -> Goal: Organize/Explore -> Viz: Interactive HTML/Tailwind Grid -> Interaction: Click tile to show details in adjacent panel -> Justification: Prevents overwhelming the user with a massive table; encourages active discovery.
+  5. Implementation Timeline -> Goal: Process Flow -> Viz: Interactive HTML Steps -> Interaction: Click step to reveal key activities -> Justification: Makes project management phasing easily readable. 
+-->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. Unicode emojis and Tailwind CSS shapes used for icons. -->
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-2xl text-brand-900 tracking-tight">
+                    CROSSROADS
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#vision" class="text-slate-600 hover:text-brand-600 transition-colors font-medium">The Vision</a>
+                    <a href="#hub" class="text-slate-600 hover:text-brand-600 transition-colors font-medium">The Hub</a>
+                    <a href="#financials" class="text-slate-600 hover:text-brand-600 transition-colors font-medium">Financials</a>
+                    <a href="#roadmap" class="text-slate-600 hover:text-brand-600 transition-colors font-medium">Roadmap</a>
+                </div>
+                <!-- Mobile Menu Button (CSS Only Toggle Concept for simplicity) -->
+                <div class="md:hidden text-2xl cursor-pointer" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    &#9776;
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+            <a href="#vision" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">The Vision</a>
+            <a href="#hub" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">The Hub</a>
+            <a href="#financials" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Financials</a>
+            <a href="#roadmap" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Roadmap</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-20">
+        <section class="bg-brand-900 text-white py-20 lg:py-32 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 30px 30px;"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-500/20 text-brand-100 text-sm font-semibold mb-6 border border-brand-500/30">Proposal by Cameron Kibble</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    A Community-Focused <br> <span class="text-brand-500">STEM Learning Hub</span>
+                </h1>
+                <p class="mt-4 text-xl text-brand-100 max-w-3xl mx-auto font-light leading-relaxed">
+                    Victoria, British Columbia lacks an accessible, interdisciplinary "third space" for hands-on learning. Crossroads bridges this gap, providing community members of all ages with tools, mentorship, and opportunities outside restrictive institutions.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#vision" class="px-8 py-3 rounded-lg bg-brand-500 text-white font-semibold hover:bg-brand-600 transition shadow-lg shadow-brand-500/30">Explore the Proposal</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Vision Section -->
+        <section id="vision" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">The Need & The Solution</h2>
+                    <p class="text-slate-600 text-lg">
+                        This section outlines the core problem facing STEM education in Greater Victoria and how the Crossroads model utilizes experiential learning and spatial design to overcome these barriers.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <!-- Interactive Toggles for Problem/Solution -->
+                    <div class="space-y-6">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer hover:border-brand-300 transition-colors" onclick="updateVisionText('problem')">
+                            <h3 class="text-xl font-bold text-slate-800 flex items-center gap-3">
+                                <span class="text-2xl">&#9888;&#65039;</span> The Problem
+                            </h3>
+                            <p class="mt-2 text-slate-600">Traditional education relies on passive instruction. Access to industrial tools is locked behind high university tuition or restrictive maker-clubs.</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer hover:border-brand-300 transition-colors" onclick="updateVisionText('theory')">
+                            <h3 class="text-xl font-bold text-slate-800 flex items-center gap-3">
+                                <span class="text-2xl">&#128214;</span> The Theory
+                            </h3>
+                            <p class="mt-2 text-slate-600">Kolb's Experiential Learning Cycle proves that concrete experience yields higher retention. The "Third Space" theory anchors community life.</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer hover:border-brand-300 transition-colors" onclick="updateVisionText('solution')">
+                            <h3 class="text-xl font-bold text-slate-800 flex items-center gap-3">
+                                <span class="text-2xl">&#128161;</span> The Solution
+                            </h3>
+                            <p class="mt-2 text-slate-600">A true drop-in center spanning 15 disciplines. No application process. Sliding-scale fees. Mentorship embedded into every interaction.</p>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Content Display -->
+                    <div class="bg-brand-900 rounded-3xl p-8 text-white min-h-[400px] flex flex-col justify-center shadow-xl relative overflow-hidden" id="vision-display">
+                        <div class="absolute top-0 right-0 p-8 opacity-10 text-9xl leading-none" id="vision-icon">&#9888;&#65039;</div>
+                        <div class="relative z-10 fade-in" id="vision-content">
+                            <span class="text-brand-500 font-bold uppercase tracking-wider text-sm mb-2 block">Current State</span>
+                            <h3 class="text-3xl font-bold mb-4">The Infrastructure Gap</h3>
+                            <p class="text-brand-100 text-lg leading-relaxed mb-6">
+                                The founder discovered firsthand that many young people lack environments that nurture curiosity. In Canada, rural areas lack dedicated facilities, while urban centers concentrate STEM access within universities imposing massive barriers.
+                            </p>
+                            <p class="text-brand-100 text-lg leading-relaxed">
+                                Current makerspaces in Victoria function more as hobbyist clubs with restricted schedules rather than open, beginner-friendly educational centers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Hub Section -->
+        <section id="hub" class="py-20 bg-slate-50 border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Inside The Hub</h2>
+                    <p class="text-slate-600 text-lg">
+                        Crossroads is an adaptable 4,000–6,000 sq ft facility divided into specialized zones. Explore how space is allocated and discover the 15 diverse disciplines supported by our cutting-edge equipment and mentorship.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Zone Allocation Chart -->
+                    <div class="lg:col-span-1 bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex flex-col">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Facility Zoning</h3>
+                        <p class="text-sm text-slate-500 mb-6">Optimized for safety, collaboration, and focus.</p>
+                        <div class="flex-grow flex items-center justify-center">
+                            <div class="chart-container h-64">
+                                <canvas id="zonesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Disciplines Explorer -->
+                    <div class="lg:col-span-2 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <h3 class="text-xl font-bold text-slate-800 mb-6 flex justify-between items-center">
+                            <span>Explore 15 Disciplines</span>
+                            <span class="text-sm font-normal bg-brand-50 text-brand-600 px-3 py-1 rounded-full">Interactive Grid</span>
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Grid List -->
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 h-[350px] overflow-y-auto custom-scrollbar pr-2" id="discipline-grid">
+                                <!-- Populated by JS -->
+                            </div>
+                            
+                            <!-- Detail Panel -->
+                            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 h-[350px] flex flex-col justify-center fade-in" id="discipline-detail">
+                                <div class="text-center text-slate-400 flex flex-col items-center">
+                                    <span class="text-4xl mb-3">&#128072;</span>
+                                    <p>Select a discipline to view equipment and safety protocols.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financials Section -->
+        <section id="financials" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Financial Strategy</h2>
+                    <p class="text-slate-600 text-lg">
+                        Sustainability is achieved through a diversified revenue model ensuring no single source exceeds 30% of total income. View our estimated startup requirements and projected 3-year growth path.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Startup Costs Chart -->
+                    <div class="bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-100">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Estimated Startup Budget</h3>
+                        <p class="text-sm text-slate-500 mb-6">Ranges accommodate scaling based on initial grant success.</p>
+                        <div class="chart-container">
+                            <canvas id="startupChart"></canvas>
+                        </div>
+                        <div class="mt-6 text-sm text-slate-600 bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                            <strong>Note:</strong> Equipment sourcing prioritizes donated surplus from Camosun College & UVic, potentially offsetting up to $40,000 of costs.
+                        </div>
+                    </div>
+
+                    <!-- Revenue Projections Chart -->
+                    <div class="bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-100">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Projected Annual Revenue</h3>
+                        <p class="text-sm text-slate-500 mb-6">Transitioning from grants to earned revenue over 3 years.</p>
+                        <div class="chart-container">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center text-sm font-semibold text-slate-700">
+                            <div class="bg-white px-4 py-2 rounded-lg border border-slate-200">Year 1: $83,000</div>
+                            <div class="bg-white px-4 py-2 rounded-lg border border-slate-200">Year 2: $138,000</div>
+                            <div class="bg-brand-50 text-brand-700 px-4 py-2 rounded-lg border border-brand-200">Year 3: $171,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap & Evaluation Section -->
+        <section id="roadmap" class="py-20 bg-slate-900 text-white border-t border-brand-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-white mb-4">Implementation & Evaluation</h2>
+                    <p class="text-slate-400 text-lg">
+                        A structured 5-phase timeline ensures responsible growth, while strict quantitative KPIs monitor participation, retention, and community impact.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Interactive Timeline -->
+                    <div class="lg:col-span-7">
+                        <h3 class="text-xl font-bold text-brand-500 mb-8 border-b border-slate-700 pb-4">Phased Roadmap</h3>
+                        <div class="relative border-l-2 border-slate-700 ml-3 md:ml-4 space-y-8" id="timeline-container">
+                            <!-- JS Populated -->
+                        </div>
+                    </div>
+
+                    <!-- Evaluation Metrics Dashboard -->
+                    <div class="lg:col-span-5">
+                        <h3 class="text-xl font-bold text-brand-500 mb-8 border-b border-slate-700 pb-4">Key Targets (Year 3)</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center hover:border-brand-500 transition-colors">
+                                <div class="text-4xl mb-2">&#128101;</div>
+                                <div class="text-3xl font-bold text-white mb-1">500</div>
+                                <div class="text-sm text-slate-400">Unique Participants / Qtr</div>
+                            </div>
+                            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center hover:border-brand-500 transition-colors">
+                                <div class="text-4xl mb-2">&#128260;</div>
+                                <div class="text-3xl font-bold text-white mb-1">60%</div>
+                                <div class="text-sm text-slate-400">Return Rate (Retention)</div>
+                            </div>
+                            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center hover:border-brand-500 transition-colors">
+                                <div class="text-4xl mb-2">&#128200;</div>
+                                <div class="text-3xl font-bold text-white mb-1">85%</div>
+                                <div class="text-sm text-slate-400">Report Skill Improvement</div>
+                            </div>
+                            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 text-center hover:border-brand-500 transition-colors">
+                                <div class="text-4xl mb-2">&#128176;</div>
+                                <div class="text-3xl font-bold text-white mb-1">55%</div>
+                                <div class="text-sm text-slate-400">Earned Rev. Proportion</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                            <h4 class="font-bold text-white mb-2 flex items-center gap-2"><span class="text-xl">&#128269;</span> Continuous Adaptation</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Performance is monitored via post-session digital surveys, quarterly focus groups, and monthly mentor debriefs. A three-tier review cycle ensures agile, data-driven governance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-500 py-8 text-center border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 Crossroads Proposal. Prepared by Cameron Kibble for Camosun College.</p>
+        </div>
+    </footer>
+
+    <!-- Logic and Interactions -->
+    <script>
+        // --- 1. Vision Section Interactivity ---
+        const visionData = {
+            problem: {
+                title: "The Infrastructure Gap",
+                tag: "Current State",
+                icon: "&#9888;&#65039;",
+                text1: "The founder discovered firsthand that many young people lack environments that nurture curiosity. In Canada, rural areas lack dedicated facilities, while urban centers concentrate STEM access within universities imposing massive barriers.",
+                text2: "Current makerspaces in Victoria function more as hobbyist clubs with restricted schedules rather than open, beginner-friendly educational centers."
+            },
+            theory: {
+                title: "Framework for Success",
+                tag: "Pedagogical Core",
+                icon: "&#128214;",
+                text1: "Research demonstrates experiential learning produces deeper understanding than passive instruction. Kolb's learning cycle highlights active experimentation.",
+                text2: "Sociologist Ray Oldenburg's 'Third Space' theory provides the foundation: a gathering place distinct from home or work, leveling social status and anchoring community life."
+            },
+            solution: {
+                title: "The Crossroads Model",
+                tag: "Proposed Initiative",
+                icon: "&#128161;",
+                text1: "A true drop-in center spanning 15 disciplines with no application process and no prerequisite skills. Equipment access is governed by sliding-scale fees.",
+                text2: "Structured mentorship is embedded into every interaction. A retired engineer works alongside a high school student, facilitating cross-generational knowledge exchange."
+            }
+        };
+
+        function updateVisionText(key) {
+            const data = visionData[key];
+            const contentDiv = document.getElementById('vision-content');
+            const iconDiv = document.getElementById('vision-icon');
+            
+            // Remove animation class
+            contentDiv.classList.remove('fade-in');
+            
+            // Trigger reflow
+            void contentDiv.offsetWidth;
+            
+            iconDiv.innerHTML = data.icon;
+            contentDiv.innerHTML = `
+                <span class="text-brand-500 font-bold uppercase tracking-wider text-sm mb-2 block">${data.tag}</span>
+                <h3 class="text-3xl font-bold mb-4">${data.title}</h3>
+                <p class="text-brand-100 text-lg leading-relaxed mb-6">${data.text1}</p>
+                <p class="text-brand-100 text-lg leading-relaxed">${data.text2}</p>
+            `;
+            
+            // Re-add animation
+            contentDiv.classList.add('fade-in');
+        }
+
+        // --- 2. Chart.js Implementations ---
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#64748b';
+
+        // A. Zones Doughnut Chart
+        const ctxZones = document.getElementById('zonesChart').getContext('2d');
+        new Chart(ctxZones, {
+            type: 'doughnut',
+            data: {
+                labels: ['Main Lab', 'Event Spaces', 'Collaboration', 'Resource Library', 'Relaxation', 'Tech-Free'],
+                datasets: [{
+                    data: [40, 20, 15, 10, 10, 5],
+                    backgroundColor: [
+                        '#0284c7', // Brand 600
+                        '#0ea5e9', // Brand 500
+                        '#38bdf8', // Brand 400
+                        '#cbd5e1', // Slate 300
+                        '#94a3b8', // Slate 400
+                        '#64748b'  // Slate 500
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right', labels: { boxWidth: 12 } },
+                    tooltip: { callbacks: { label: (ctx) => ` ${ctx.label}: ${ctx.raw}%` } }
+                },
+                cutout: '65%'
+            }
+        });
+
+        // B. Revenue Bar Chart
+        const ctxRev = document.getElementById('revenueChart').getContext('2d');
+        new Chart(ctxRev, {
+            type: 'bar',
+            data: {
+                labels: ['Year 1', 'Year 2', 'Year 3'],
+                datasets: [
+                    {
+                        label: 'Earned Revenue (Fees, Rentals, Memberships)',
+                        data: [25000, 60000, 89000],
+                        backgroundColor: '#0ea5e9',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Grants & Sponsorships',
+                        data: [45000, 60000, 60000],
+                        backgroundColor: '#94a3b8',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Events & Merch',
+                        data: [13000, 18000, 22000],
+                        backgroundColor: '#cbd5e1',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { stacked: true, grid: { display: false } },
+                    y: { stacked: true, beginAtZero: true, border: {display: false}, ticks: { callback: value => '$' + value/1000 + 'k' } }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12 } },
+                    tooltip: { mode: 'index', intersect: false }
+                }
+            }
+        });
+
+        // C. Startup Budget Horizontal Bar Chart
+        const ctxStart = document.getElementById('startupChart').getContext('2d');
+        new Chart(ctxStart, {
+            type: 'bar',
+            data: {
+                labels: ['Equip & Tools', 'Inventory', 'Staffing', 'Product Dev', 'Marketing', 'Legal & Misc'],
+                datasets: [
+                    {
+                        label: 'Low Estimate',
+                        data: [30000, 15000, 15000, 10000, 5000, 16000],
+                        backgroundColor: '#0ea5e9',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'High Estimate',
+                        data: [100000, 50000, 40000, 30000, 20000, 45000],
+                        backgroundColor: '#e0f2fe', // Brand 100
+                        borderWidth: 1,
+                        borderColor: '#0ea5e9',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { beginAtZero: true, border: {display: false}, ticks: { callback: value => '$' + value/1000 + 'k' } },
+                    y: { grid: { display: false } }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12 } }
+                }
+            }
+        });
+
+        // --- 3. Disciplines Grid Interaction ---
+        const disciplines = [
+            { id: 'chem', name: 'Chemistry', icon: '&#129514;', activities: 'Titrations, crystallization, flame tests, polymer synthesis.', safety: 'Fume hoods, WHMIS storage, eyewash stations.', tools: 'Lab-grade glassware, spectrometers, reagents.' },
+            { id: 'phys', name: 'Physics', icon: '&#127756;', activities: 'Lenz\'s Law demos, speed of sound measurement.', safety: 'Class II laser safety, magnetic shielding.', tools: 'Oscilloscopes, lasers, magnets.' },
+            { id: 'eng', name: 'Engineering', icon: '&#128295;', activities: 'PCB fabrication, 3D printing, reverse-engineering.', safety: 'Machine guarding, hearing protection.', tools: 'CAD software, CNC machines, electronics.' },
+            { id: 'robo', name: 'Robotics', icon: '&#129302;', activities: 'Line-following robots, Sumo challenges.', safety: 'Battery handling, soldering ventilation.', tools: 'Arduino, Raspberry Pi, sensors, actuators.' },
+            { id: 'comp', name: 'Computer Sci', icon: '&#128187;', activities: 'Python/C++ coding, web dev, cybersecurity.', safety: 'Electrical safety, data security protocols.', tools: 'Programming workstations, IDEs, servers.' },
+            { id: 'mfg', name: 'Manufacturing', icon: '&#9881;&#65039;', activities: 'Machining, additive/subtractive manufacturing.', safety: 'Face shields, lockout/tagout.', tools: 'Lathes, mills, saws.' },
+            { id: 'arch', name: 'Architecture', icon: '&#127963;', activities: 'Tiny house design, urban planning models.', safety: 'Hot wire & laser cutter protocols.', tools: 'AutoCAD, foam cutters, modeling tools.' },
+            { id: 'art', name: 'Art & Design', icon: '&#127912;', activities: 'Digital illustration, 3D modeling, murals.', safety: 'Print chemical ventilation.', tools: 'Drawing tablets, design software.' },
+            { id: 'bio', name: 'Biology', icon: '&#128300;', activities: 'Bacterial cultures, DNA extraction.', safety: 'Biosafety protocols, sharps disposal.', tools: 'Microscopes, specimen slides.' },
+            { id: 'env', name: 'Env. Science', icon: '&#127793;', activities: 'Water/soil testing, solar device build.', safety: 'Field safety, chemical handling.', tools: 'Analysis tools, renewable energy kits.' },
+            { id: 'mat', name: 'Material Eng.', icon: '&#129322;', activities: 'Tensile testing, composite layups.', safety: 'Heat treatment safety.', tools: 'Tensile testers, hardness meters.' },
+            { id: 'math', name: 'Mathematics', icon: '&#128208;', activities: 'Fractal art, algorithms, modeling.', safety: 'Standard ergonomic safety.', tools: 'Data visualization software.' },
+            { id: 'stat', name: 'Statistics', icon: '&#128202;', activities: 'Survey design, regression modeling.', safety: 'Standard ergonomic safety.', tools: 'R, SPSS, real-world data sets.' },
+            { id: 'fin', name: 'Finance', icon: '&#128176;', activities: 'Personal budgeting, stock portfolios.', safety: 'Standard ergonomic safety.', tools: 'Financial modeling software.' },
+            { id: 'hlth', name: 'Health', icon: '&#129658;', activities: 'First aid, mindfulness, nutrition.', safety: 'Standard first aid safety.', tools: 'Wellness resources, first aid materials.' }
+        ];
+
+        const gridContainer = document.getElementById('discipline-grid');
+        const detailContainer = document.getElementById('discipline-detail');
+
+        // Render Grid
+        disciplines.forEach(d => {
+            const btn = document.createElement('button');
+            btn.className = 'bg-white border border-slate-200 rounded-xl p-3 text-left hover:border-brand-500 hover:shadow-md transition-all group focus:outline-none focus:ring-2 focus:ring-brand-500';
+            btn.innerHTML = `<div class="text-2xl mb-1 group-hover:scale-110 transition-transform">${d.icon}</div><div class="font-semibold text-slate-800 text-sm truncate">${d.name}</div>`;
+            btn.onclick = () => showDisciplineDetail(d);
+            gridContainer.appendChild(btn);
+        });
+
+        function showDisciplineDetail(data) {
+            detailContainer.classList.remove('fade-in');
+            void detailContainer.offsetWidth; // Reflow
+            
+            detailContainer.innerHTML = `
+                <div class="h-full flex flex-col">
+                    <div class="flex items-center gap-3 mb-4 pb-4 border-b border-slate-200">
+                        <span class="text-3xl">${data.icon}</span>
+                        <h4 class="text-2xl font-bold text-slate-900">${data.name}</h4>
+                    </div>
+                    <div class="space-y-4 flex-grow overflow-y-auto custom-scrollbar pr-2">
+                        <div>
+                            <span class="text-xs font-bold uppercase text-brand-600 tracking-wider">Activities</span>
+                            <p class="text-slate-700 mt-1">${data.activities}</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-brand-600 tracking-wider">Key Tools</span>
+                            <p class="text-slate-700 mt-1">${data.tools}</p>
+                        </div>
+                        <div class="bg-amber-50 p-3 rounded-lg border border-amber-200 mt-2">
+                            <span class="text-xs font-bold uppercase text-amber-700 tracking-wider flex items-center gap-1"><span class="text-base">&#9888;&#65039;</span> Safety Rules</span>
+                            <p class="text-amber-900 mt-1 text-sm">${data.safety}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            detailContainer.classList.add('fade-in');
+        }
+
+        // --- 4. Interactive Timeline ---
+        const timelineData = [
+            { phase: "Phase 1: Foundation", time: "Months 1–3", desc: "Incorporate nonprofit, recruit board, secure seed/grant funding, finalize facility partnership." },
+            { phase: "Phase 2: Build-Out", time: "Months 4–6", desc: "Facility renovation, zone setup, equipment installation, safety certification, hire program director." },
+            { phase: "Phase 3: Soft Launch", time: "Months 7–9", desc: "Open to founding members at reduced capacity, pilot workshops, collect feedback, train volunteers." },
+            { phase: "Phase 4: Full Launch", time: "Months 10–12", desc: "Open to public, full programming schedule, first fundraiser event, corporate sponsorship outreach." },
+            { phase: "Phase 5: Growth", time: "Years 2–3", desc: "Expand programming scope, increase staffing, deepen partnerships, target self-sufficiency." }
+        ];
+
+        const timelineContainer = document.getElementById('timeline-container');
+        
+        timelineData.forEach((item, index) => {
+            const dotColor = index === 0 ? 'bg-brand-500 border-slate-900' : 'bg-slate-700 border-slate-900';
+            const html = `
+                <div class="relative group cursor-pointer" onclick="toggleTimeline(${index})">
+                    <div class="absolute -left-[21px] md:-left-[25px] mt-1.5 h-4 w-4 rounded-full border-4 ${dotColor} group-hover:bg-brand-400 transition-colors" id="dot-${index}"></div>
+                    <div class="pl-6">
+                        <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 mb-1">
+                            <h4 class="text-lg font-bold text-white group-hover:text-brand-400 transition-colors">${item.phase}</h4>
+                            <span class="text-sm font-mono text-brand-500 bg-brand-500/10 px-2 py-0.5 rounded">${item.time}</span>
+                        </div>
+                        <p class="text-slate-400 text-sm hidden" id="desc-${index}">${item.desc}</p>
+                    </div>
+                </div>
+            `;
+            timelineContainer.insertAdjacentHTML('beforeend', html);
+        });
+
+        // Open first timeline item by default
+        toggleTimeline(0);
+
+        function toggleTimeline(index) {
+            // Close all
+            for(let i=0; i<timelineData.length; i++) {
+                document.getElementById(`desc-${i}`).classList.add('hidden');
+                document.getElementById(`dot-${i}`).classList.remove('bg-brand-500');
+                document.getElementById(`dot-${i}`).classList.add('bg-slate-700');
+            }
+            // Open selected
+            const desc = document.getElementById(`desc-${index}`);
+            desc.classList.remove('hidden');
+            desc.classList.add('fade-in');
+            document.getElementById(`dot-${index}`).classList.remove('bg-slate-700');
+            document.getElementById(`dot-${index}`).classList.add('bg-brand-500');
+        }
+
+    </script>
+</body>
+</html>
