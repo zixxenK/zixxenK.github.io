@@ -14,9 +14,24 @@ A proposal and feasibility study for an open-access community STEM learning hub 
 
 All three pages share a persistent **top navigation bar**, **grouped sidebar** with scroll-spy, and **breadcrumb** trail that updates on scroll.
 
-### To View
+### Live Site
+
+The site is hosted on GitHub Pages and is publicly accessible at:
+
+**<https://zixxenK.github.io>**
+
+### To View Locally
 
 Open `index.html` in any modern browser. An internet connection is required on first load for the Plotly.js CDN (used by Dashboard and Feasibility pages; `proposal.html` is fully self-contained).
+
+### Hosting on GitHub Pages
+
+This repository is configured to deploy automatically to GitHub Pages whenever changes are pushed to the `main` branch, via the workflow in `.github/workflows/deploy.yml`.
+
+To enable GitHub Pages in your own fork:
+1. Go to **Settings → Pages** in your repository.
+2. Under **Build and deployment → Source**, select **GitHub Actions**.
+3. Push any commit to `main` — the workflow will build and publish the site automatically.
 
 ### Shared Assets
 
