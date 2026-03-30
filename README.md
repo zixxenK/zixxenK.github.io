@@ -18,7 +18,7 @@ All three pages share a persistent **top navigation bar**, **grouped sidebar** w
 
 The site is hosted on GitHub Pages and is publicly accessible at:
 
-**<https://zixxenK.github.io>**
+**<https://zixxenk.github.io>**
 
 ### To View Locally
 
