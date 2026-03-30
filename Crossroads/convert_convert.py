@@ -11,7 +11,7 @@ Produces a submission-ready .docx with:
   - Times New Roman 12pt body, proper margins, 1.15 line spacing
 """
 
-import re
+import argparse
 import markdown
 from bs4 import BeautifulSoup, NavigableString, Tag
 from docx import Document
@@ -370,6 +370,10 @@ def markdown_to_docx(md_path, docx_path):
 # Run
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    md_file = r"c:\Documents\Crossroads\workinprogressenglishproposalcrossroads.md"
-    docx_file = r"c:\Documents\Crossroads\Crossroads_Proposal_v6.docx"
-    markdown_to_docx(md_file, docx_file)
+    parser = argparse.ArgumentParser(
+        description="Convert a Markdown file into a professionally formatted Word document (.docx)."
+    )
+    parser.add_argument("input", help="Path to the source Markdown file")
+    parser.add_argument("output", help="Path for the generated .docx file")
+    args = parser.parse_args()
+    markdown_to_docx(args.input, args.output)
