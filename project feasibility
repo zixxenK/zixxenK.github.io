@@ -12,34 +12,77 @@ Date: March 26, 2026 (Updated: March 29, 2026)
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [Needs Analysis](#2-needs-analysis)
-3. [System Identification](#3-system-identification)
-4. [Problem Formulation](#4-problem-formulation)
-5. [Generation of System Alternatives](#5-generation-of-system-alternatives)
-6. [Determination of Viability](#6-determination-of-viability)
-   - 6.1 [Technical Feasibility](#61-technical-feasibility)
-   - 6.2 [Updated Cost Analysis - 2026 Adjustment](#62-updated-cost-analysis--2026-adjustment)
-   - 6.3 [Revised Economic Feasibility](#63-revised-economic-feasibility)
-   - 6.4 [Social Feasibility](#64-social-feasibility)
-   - 6.5 [Environmental and Cultural Feasibility](#65-environmental-and-cultural-feasibility)
-   - 6.6 [Political and Legal Feasibility](#66-political-and-legal-feasibility)
-   - 6.7 [Operational Feasibility](#67-operational-feasibility)
-   - 6.8 [Schedule Feasibility](#68-schedule-feasibility)
-7. [Conclusion and Recommendation](#7-conclusion-and-recommendation)
-8. [References](#8-references)
+- [Feasibility Study: Crossroads Community STEM Centre](#feasibility-study-crossroads-community-stem-centre)
+  - [Table of Contents](#table-of-contents)
+  - [1. Introduction](#1-introduction)
+    - [1.1 Study Scope and Methodology](#11-study-scope-and-methodology)
+    - [1.2 Data Sources](#12-data-sources)
+  - [2. Needs Analysis](#2-needs-analysis)
+  - [3. System Identification](#3-system-identification)
+  - [4. Problem Formulation](#4-problem-formulation)
+    - [4.1 Competitive Landscape](#41-competitive-landscape)
+    - [4.2 Demand Quantification](#42-demand-quantification)
+  - [5. Generation of System Alternatives](#5-generation-of-system-alternatives)
+    - [5.1 Comparison Matrix](#51-comparison-matrix)
+  - [6. Determination of Viability](#6-determination-of-viability)
+    - [6.1 Technical Feasibility](#61-technical-feasibility)
+      - [6.1.1 Equipment Inventory (Lean Model)](#611-equipment-inventory-lean-model)
+      - [6.1.2 Facility Requirements](#612-facility-requirements)
+      - [6.1.3 Safety Protocols](#613-safety-protocols)
+    - [6.2 Updated Cost Analysis - 2026 Adjustment](#62-updated-cost-analysis---2026-adjustment)
+    - [6.3 Revised Economic Feasibility](#63-revised-economic-feasibility)
+      - [6.3.1 Break-Even Discussion and Revenue Assumptions](#631-break-even-discussion-and-revenue-assumptions)
+      - [6.3.2 Revenue Diversification Model](#632-revenue-diversification-model)
+      - [6.3.3 Sustainability Trajectory](#633-sustainability-trajectory)
+      - [6.3.4 Cost Sensitivity Analysis](#634-cost-sensitivity-analysis)
+      - [6.3.5 Evaluation KPIs](#635-evaluation-kpis)
+    - [6.4 Social Feasibility](#64-social-feasibility)
+      - [6.4.1 Clientele Personas](#641-clientele-personas)
+      - [6.4.2 Price Sensitivity](#642-price-sensitivity)
+      - [6.4.3 Community Ecosystem](#643-community-ecosystem)
+    - [6.5 Environmental and Cultural Feasibility](#65-environmental-and-cultural-feasibility)
+      - [6.5.1 Environmental Considerations](#651-environmental-considerations)
+      - [6.5.2 Cultural Alignment](#652-cultural-alignment)
+    - [6.6 Political and Legal Feasibility](#66-political-and-legal-feasibility)
+      - [6.6.1 Regulatory Roadmap](#661-regulatory-roadmap)
+      - [6.6.2 Institutional Partnerships](#662-institutional-partnerships)
+    - [6.7 Operational Feasibility](#67-operational-feasibility)
+      - [6.7.1 Staffing Model](#671-staffing-model)
+      - [6.7.2 Weekly Operating Schedule](#672-weekly-operating-schedule)
+    - [6.8 Schedule Feasibility](#68-schedule-feasibility)
+      - [Phase 1: Foundation (Months 1-3)](#phase-1-foundation-months-1-3)
+      - [Phase 2: Build-Out (Months 4-6)](#phase-2-build-out-months-4-6)
+      - [Phase 3: Soft Launch (Months 7-9)](#phase-3-soft-launch-months-7-9)
+      - [Phase 4: Full Launch (Months 10-12)](#phase-4-full-launch-months-10-12)
+      - [Phase 5: Optimization (Ongoing)](#phase-5-optimization-ongoing)
+      - [6.8.1 Risk Triggers and Contingencies](#681-risk-triggers-and-contingencies)
+  - [7. Risk Assessment Summary](#7-risk-assessment-summary)
+  - [8. Conclusion and Recommendation](#8-conclusion-and-recommendation)
+  - [9. References](#9-references)
 
 ---
 
 ## 1. Introduction
 
-This feasibility study assesses the viability of establishing the Crossroads Community STEM Centre, a proposed open-access technical learning facility in Langford, British Columbia. The study evaluates the project across technical, economic, social, environmental, political, and operational dimensions to determine whether the project should proceed to the funding acquisition and construction phases. All data presented herein is drawn from the Crossroads Community STEM Centre Project Proposal (March 2026), an independent 2026 local market cost analysis, and a community needs assessment survey conducted in February 2026.
+This feasibility study assesses the viability of establishing the Crossroads Community STEM Centre, a proposed open-access technical learning facility in Langford, British Columbia. The study evaluates the project across eight dimensions - technical, cost, economic, social, environmental, cultural, political/legal, operational, and schedule - to determine whether the project should proceed to the funding acquisition and construction phases.
+
+### 1.1 Study Scope and Methodology
+
+The assessment applies a structured systems engineering feasibility framework: problem formulation, generation of alternatives, and determination of viability across all applicable dimensions. Each viability dimension concludes with an explicit feasibility determination.
+
+### 1.2 Data Sources
+
+All data presented herein is drawn from three primary sources. No data has been fabricated or assumed without documentation.
+
+1. **Crossroads Community STEM Centre Project Proposal** (March 11, 2026) - the original operational and financial plan containing startup budgets, revenue projections, equipment specifications, staffing models, and risk assessments.
+2. **Independent 2026 Local Market Cost Analysis** (March 26, 2026) - an updated analysis recalibrating the proposal's startup estimates against current Langford commercial lease rates, provincial wage benchmarks, and inflationary pressures. Where financial figures conflict between the proposal and this analysis, the updated March 26 figures are treated as canonical.
+3. **Community Needs Assessment Survey** (February 2026) - a survey of 54 respondents in the Langford and Greater Victoria area measuring demand for accessible STEM programming, preferred disciplines, price sensitivity, and scheduling preferences.
 
 ---
 
 ## 2. Needs Analysis
 
-Langford is Vancouver Island's fastest-growing municipality, with a 2024 population of 58,320 and a 5.0 percent year-over-year growth rate. Despite this expansion, the West Shore region lacks a centralized, open-access facility where residents can develop practical technical skills outside of formal post-secondary enrollment. Access to advanced tools and lab environments in the Greater Victoria area is concentrated within institutions that impose tuition, enrollment, and scheduling barriers.
+Langford is Vancouver Island's fastest-growing municipality, with a 2026 projected population of 63,120 and a 3.95 percent year-over-year growth rate. Despite this expansion, the West Shore region lacks a centralized, open-access facility where residents can develop practical technical skills outside of formal post-secondary enrollment. Access to advanced tools and lab environments in the Greater Victoria area is concentrated within institutions that impose tuition, enrollment, and scheduling barriers.
 
 A review of existing alternatives in the region confirms this gap. The University of Victoria and Camosun College maintain well-equipped STEM labs, but access is restricted to enrolled students during designated institutional hours. The Victoria Makerspace operates on an application-based membership model with limited public drop-in hours and a club-oriented atmosphere focused on a narrow range of hobbyist disciplines.
 
@@ -80,6 +123,30 @@ The proposed system is a nonprofit community STEM learning facility located in L
 
 Langford, BC, despite its rapid demographic and economic expansion, lacks an open-access community facility for residents to develop practical STEM skills using professional-grade equipment without post-secondary enrollment. Existing alternatives either restrict access to enrolled students or impose application-based membership barriers unsuited to beginners. Consequently, career changers, youth exploring STEM interests, and local professionals lack affordable, structured access to hands-on technical education.
 
+### 4.1 Competitive Landscape
+
+A direct comparison of existing facilities in the Greater Victoria region demonstrates the access gap Crossroads is designed to fill:
+
+| Facility | Access Model | Approx. Cost | Hours | Equipment Scope | Target Audience |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| University of Victoria (~22,000 students) | Restricted to enrolled students | Tuition-based | Institutional hours only | Full STEM labs | Enrolled students |
+| Camosun College (~19,000 learners) | Restricted to enrolled students | Tuition-based | Institutional hours only | Full STEM labs, CTAC | Enrolled students |
+| Victoria Makerspace | Application-based membership | Membership fee | Limited public hours | Narrow hobbyist range | Hobbyists, makers |
+| **Crossroads (Proposed)** | **Open-access, drop-in** | **$60/mo or $15 drop-in** | **73 hrs/week** | **4-discipline professional labs** | **All community members** |
+
+Community feedback on public forums identifies Victoria Makerspace barriers for beginners and a lack of structured programming. Neither UVic nor Camosun provide community access outside of enrollment. Crossroads is positioned as the first facility in the West Shore offering structured, hands-on STEM access without enrollment or application barriers.
+
+### 4.2 Demand Quantification
+
+The February 2026 community needs assessment survey (n=54) quantifies demand across four discipline areas:
+
+- **3D Printing / Digital Fabrication:** 72% interest
+- **Software Development:** 58% interest
+- **Robotics / Electronics:** 54% interest
+- **Creative and Applied Design:** 41% interest
+
+Additionally, 68% of respondents preferred weekday evening access and 59% preferred weekend availability, both of which are accommodated by the proposed 73-hour weekly schedule.
+
 ---
 
 ## 5. Generation of System Alternatives
@@ -92,6 +159,19 @@ Three system alternatives have been developed to address the problem formulation
 
 **Alternative C - Pop-Up Fallback Model:** A mobile workshop model renting existing community center space for targeted, schedule-bound programming. This functions purely as a risk-mitigation fallback if permanent facility acquisition is severely delayed, as it cannot deliver the continuous equipment access fundamental to the project's core mission.
 
+### 5.1 Comparison Matrix
+
+| Dimension | Alternative A (Lean) | Alternative B (Expanded) | Alternative C (Pop-Up) |
+| :--- | :--- | :--- | :--- |
+| Facility Size | 4,000 sqft | 6,000 sqft | Rented space (variable) |
+| Year 1 Startup Capital | $476,100 | $738,300 | Minimal (<$50,000) |
+| Annual Operating Cost | $310,000 | $450,000 | Variable per event |
+| Full-Time Staff | 2 Lab Supervisors + ED | 3+ Lab Supervisors + ED | Contract instructors only |
+| Equipment Scope | Core clusters (3D printing, electronics, computing) | Full complement (CNC, expanded fab, enterprise digital) | Portable equipment only |
+| Weekly Access Hours | 73 (63 staffed + 10 self-access) | 73+ | Schedule-bound only |
+| Risk Profile | Moderate | High (capital exposure) | Low (no lease commitment) |
+| Scalability | Can scale to Alt B | Full-scale from launch | Cannot scale to permanent |
+
 **Comparison:** Alternative A is recommended for initial launch. It carries a lower financial risk profile and can sustainably scale to Alternative B as earned revenue stabilizes.
 
 ---
@@ -100,7 +180,54 @@ Three system alternatives have been developed to address the problem formulation
 
 ### 6.1 Technical Feasibility
 
-The required equipment is commercially available and well-documented. Specific acquisitions include standard FDM 3D printers, a 40W CO2 laser cutter, benchtop CNC routers, and standard electronics testing hardware. The facility requires 200-amp electrical service, industrial ventilation for fabrication areas, and compliance with the Accessible Canada Act. These requirements are standard for light industrial spaces available in Langford's McCallum Road and West Shore Parkway zones. WorkSafeBC guidelines are satisfied through a mandatory safety orientation and dual-supervisor coverage during high-risk equipment operation. **Technical feasibility is confirmed.**
+The required equipment is commercially available and well-documented. The facility requires 200-amp electrical service, industrial ventilation for fabrication areas, and compliance with the Accessible Canada Act. These requirements are standard for light industrial spaces available in Langford's McCallum Road and West Shore Parkway zones.
+
+#### 6.1.1 Equipment Inventory (Lean Model)
+
+The following equipment has been specified for the Lean Model launch, organized by discipline:
+
+**Robotics and Electronics:**
+- 20x Arduino Uno R4 starter kits
+- 10x Raspberry Pi 5 kits
+- 6x soldering stations (with fume extraction)
+- 4x benchtop oscilloscopes
+- Component inventory and test benches
+
+**Digital Fabrication:**
+- 2-4x FDM 3D printers
+- 1x 40W CO2 laser cutter (enclosed with safety interlock)
+- 1x benchtop CNC router (with dust collection)
+
+**Software Development and Creative Design:**
+- 10-15x computing workstations
+- 6x drawing tablets
+- Design software licenses (CAD, illustration, development environments)
+- Networking equipment
+
+Surplus equipment from post-secondary institutions (notably Camosun College CTAC) is projected to offset $15,000 to $30,000 of startup equipment costs under the Lean Model.
+
+#### 6.1.2 Facility Requirements
+
+- **Electrical:** 200-amp service with dedicated circuits for high-draw equipment (laser cutter, CNC router, multiple workstations)
+- **Ventilation:** Industrial ventilation for fabrication areas, soldering fume extraction, dust collection system for CNC operations
+- **ESD Protection:** ESD-safe workstations in the electronics area
+- **Accessibility:** Full compliance with the Accessible Canada Act
+- **Data Protection:** UPS battery backup for computing workstations
+
+Suitable light industrial spaces are available in Langford at current lease rates of $16-$22/sqft net plus $6-$9/sqft NNN.
+
+#### 6.1.3 Safety Protocols
+
+All new participants must complete a mandatory 30-minute safety orientation, offered free of charge. The orientation covers facility rules, emergency procedures, and equipment-specific hazards per WorkSafeBC guidelines. Upon completion, participants receive immediate drop-in access.
+
+**Hazard Classes by Discipline:**
+
+- **Robotics and Electronics:** Soldering ventilation, ESD-safe workstations, battery fire-safe storage, eye protection for component work.
+- **Digital Fabrication:** Machine guarding on CNC router, dust collection system, laser safety enclosure, face shields for material cutting operations.
+- **Software Development:** Standard workstation ergonomics; no high-risk equipment; UPS battery backup for data protection.
+- **Creative and Applied Design:** Ventilation for adhesives and spray materials, blade safety protocols for physical modelling, proper lighting standards.
+
+WorkSafeBC guidelines are satisfied through mandatory safety orientation and dual-supervisor coverage during high-risk equipment operation. **Technical feasibility is confirmed.**
 
 ### 6.2 Updated Cost Analysis - 2026 Adjustment
 
@@ -142,13 +269,38 @@ The revised 2026 cost analysis confirms that the project remains economically vi
 | Insurance, Operations & Legal | $15,000 | $22,000 |
 | **Total Annual Operating** | **$310,000** | **$450,000** |
 
-**Break-Even Discussion & Revenue Assumptions:**
+#### 6.3.1 Break-Even Discussion and Revenue Assumptions
 
 Under the adjusted Lean Model, monthly operating expenses average approximately $25,833. To achieve a sustainable surplus for the contingency reserve, monthly revenue must target $29,000.
 
 To meet this, the original membership pricing assumption must shift. The target becomes 200 active members at $60/month ($12,000), supported by $17,000 monthly distributed across workshop fees, corporate training contracts, institutional partnerships, and sustained grant funding. The commitment to capping any single funding source at 30% of total revenue remains intact, ensuring the center is shielded from abrupt grant cancellations.
 
-**Cost Sensitivity Analysis:**
+*Note: The original project proposal (March 11, 2026) projected $34,000 monthly revenue at $50/month with 160 members. The figures above reflect the March 26 updated cost analysis, which adjusted membership pricing to $60/month and the member target to 200 to account for 2026 market conditions.*
+
+#### 6.3.2 Revenue Diversification Model
+
+The following seven-stream revenue model was developed in the original project proposal. While monthly targets have been recalibrated in the updated analysis, the diversification structure remains the core revenue strategy:
+
+**Table 3: Monthly Revenue Streams (Pre-Adjustment Targets from Proposal)**
+
+| Revenue Source | Unit Price | Monthly Target | Monthly Revenue |
+| :--- | :--- | :--- | :--- |
+| Individual Memberships | $50/month | 160 members | $8,000 |
+| Drop-in Day Passes | $15/visit | 200 visits | $3,000 |
+| Workshop Fees (avg.) | $40/attendee | 200 attendees | $8,000 |
+| Corporate Training | $500/session | 6 sessions | $3,000 |
+| Equipment Surcharges | $15/booking | 175 bookings | $2,625 |
+| Event and Room Rental | $250/event | 5 events | $1,250 |
+| Grants and Sponsorships | - | - | $8,125 |
+| **Total Monthly Revenue** | | | **$34,000** |
+
+Under the updated $60/month membership model with 200 members, the membership line increases to $12,000/month. The remaining streams are expected to generate $17,000/month to reach the $29,000 target. Grant and sponsorship funding ($97,500/year) represents approximately 28% of the $348,000 annual revenue target, remaining within the 30% single-source cap.
+
+#### 6.3.3 Sustainability Trajectory
+
+Earned revenue (memberships, workshops, drop-ins, corporate training, surcharges, rentals) is projected to reach 55% of total income by Year 3, reducing grant dependency and strengthening long-term financial sustainability.
+
+#### 6.3.4 Cost Sensitivity Analysis
 
 **Best-Case Scenario:** Equipment donations from institutional partners (e.g., Camosun College CTAC) offset up to $25,000 in capital expenditures; membership caps at 250 users, generating a comfortable monthly surplus.
 
@@ -156,44 +308,195 @@ To meet this, the original membership pricing assumption must shift. The target 
 
 **Worst-Case Scenario:** Commercial lease rates spike above $32/sqft or membership stalls below 120 users. The facility must immediately pivot to the Pop-Up Fallback Model to restrict overhead exposure while rebuilding community engagement.
 
+#### 6.3.5 Evaluation KPIs
+
+The following key performance indicators will be tracked to measure operational and financial health:
+
+1. **Engagement Analytics:** Number of active monthly participants and average hours on-site. Year 1 target: 150 unique participants per quarter. Year 3 target: 500 participants per quarter with a 60% return rate.
+2. **Employment Pipelines:** Growth of student internship placements and member career transitions into technical roles.
+3. **Social Impact Data:** Member surveys tracking self-reported improvements in well-being, skill confidence, and community connectivity.
+4. **Institutional Partnerships:** Minimum of 4 annual partnerships with local schools and businesses to sustain programming.
+
+**Economic feasibility is confirmed.**
+
 ### 6.4 Social Feasibility
 
-Crossroads operates on a sliding-scale fee structure to ensure equitable access, mitigating the impact of the increased $60 base membership fee. Targeted outreach for low-income populations through partnerships with School Districts 61, 62, and 63 remains a priority. The volunteer mentorship cohort, projected at 15 to 25 active members, fosters a peer-support ecosystem, anchoring the facility as a vital "third place" for community development. **Social feasibility remains highly robust.**
+Crossroads operates on a sliding-scale fee structure to ensure equitable access, mitigating the impact of the increased $60 base membership fee. Targeted outreach for low-income and Indigenous youth through partnerships with School Districts 61, 62, and 63 remains a priority.
+
+#### 6.4.1 Clientele Personas
+
+The following personas were developed from community consultation and survey data to guide programming and outreach:
+
+| Persona | Demographics | Primary Needs | Estimated Share |
+| :--- | :--- | :--- | :--- |
+| Curious Beginners | All ages, no prior technical experience | Low-pressure environment to explore STEM interests | 35% |
+| Experienced Makers | Hobbyists and professionals | Industrial-grade tools not available in home workshops; collaborative community | 25% |
+| Students and Educators | Post-secondary students; K-12 teachers | Supplementary lab time beyond institutional hours; ADST curriculum resources | 25% |
+| Community Builders | Retirees, volunteers | Social connection through mentorship, event organization, and peer support | 15% |
+
+Additional target populations include youth ages 12-18, adult career changers seeking flexible non-traditional schedules, and retirees contributing as volunteer mentors.
+
+#### 6.4.2 Price Sensitivity
+
+The community survey found that 61% of respondents preferred a monthly membership fee in the $25-$50 range. The updated $60/month base fee exceeds this preference band, making the sliding-scale structure essential for maintaining equitable access. The $15 drop-in option provides a lower-commitment entry point for price-sensitive users.
+
+#### 6.4.3 Community Ecosystem
+
+The volunteer mentorship cohort, projected at 15 to 25 active members contributing approximately 200 hours monthly, fosters a peer-support ecosystem. This model anchors the facility as a vital "third place" for community development, blending structured learning with social connectivity.
+
+**Social feasibility remains highly robust.**
 
 ### 6.5 Environmental and Cultural Feasibility
 
-The project aligns cleanly with provincial initiatives promoting experiential, design-based learning. Light fabrication waste is managed via standard commercial protocols, and an emphasis is placed on iterative prototyping which inherently minimizes raw material waste. Culturally, the facility addresses the infrastructure deficit caused by rapid municipal expansion. **Environmental and cultural feasibility is confirmed.**
+#### 6.5.1 Environmental Considerations
+
+Light fabrication waste is managed via standard commercial protocols. Discipline-specific waste management includes:
+
+- **Digital Fabrication:** Dust collection system on CNC router captures particulate matter; 3D printer waste (PLA, PETG) is recyclable through commercial filament recycling programs; laser cutter operates within an enclosed safety enclosure with fume extraction.
+- **Robotics and Electronics:** Soldering fume extraction at each station; battery fire-safe storage; electronic component waste managed through BC-certified e-waste recycling.
+- **Creative and Applied Design:** Ventilation for adhesives and spray materials; blade waste and physical modelling scrap disposed via standard commercial waste streams.
+
+An emphasis on iterative prototyping inherently minimizes raw material waste, as designs are refined digitally before physical fabrication.
+
+#### 6.5.2 Cultural Alignment
+
+The British Columbia Ministry of Education's Applied Design, Skills, and Technologies (ADST) curriculum emphasizes experiential learning and iterative design across K-12 education. Crossroads directly extends the ADST model into the community setting, bridging the gap between secondary education and professional practice. The facility addresses the infrastructure deficit caused by rapid municipal expansion in the West Shore, where population growth (3.95% year-over-year) has outpaced the development of community learning infrastructure.
+
+**Environmental and cultural feasibility is confirmed.**
 
 ### 6.6 Political and Legal Feasibility
 
-Incorporation as a nonprofit society under the BC Societies Act is required to maximize public trust and grant eligibility. The updated budget properly accounts for the comprehensive Commercial General Liability and specialized riders necessary for an open-access facility housing equipment like CO2 lasers and CNC mills. Political support for workforce readiness programs in the West Shore is strong. **Political and legal feasibility is confirmed.**
+#### 6.6.1 Regulatory Roadmap
+
+The following legal and regulatory requirements must be satisfied prior to launch:
+
+1. **BC Societies Act:** Incorporation as a nonprofit society to maximize public trust and grant eligibility. Nonprofit bylaws are a deliverable of the Detailed Design phase (pre-launch student labor, Table 1).
+2. **WorkSafeBC Compliance:** Safety orientation protocols, dual-supervisor coverage during high-risk operations, and premium payments for workshop environments.
+3. **Commercial General Liability (CGL) Insurance:** Specialized riders necessary for an open-access facility housing CO2 lasers, CNC mills, and soldering stations. The updated Lean Model budget allocates $28,000 for legal, permits, and high-risk insurance (up from $20,000 in the original proposal).
+4. **Accessible Canada Act:** Full facility compliance for accessibility.
+
+#### 6.6.2 Institutional Partnerships
+
+Political support for workforce readiness programs in the West Shore is strong. Key institutional partnerships include:
+
+- **Camosun College CTAC (Technology Access Centre):** Preliminary discussions for student placements and limited equipment transfers, projected to offset $15,000-$30,000 in startup costs.
+- **VIATEC (Victoria Innovation, Advanced Technology, and Entrepreneurship Council):** Access to over 900 potential corporate sponsors and mentors for programming and funding support.
+- **School Districts 61, 62, and 63:** Targeted outreach partnerships for youth programming, free trial workshops, and ADST curriculum alignment.
+
+**Political and legal feasibility is confirmed.**
 
 ### 6.7 Operational Feasibility
 
-The operational model relies on two full-time safety instructors working staggered shifts to cover 63 staffed hours per week, with an overlapping presence during peak afternoon and weekend hours. A mandatory safety orientation protocol complies with provincial health and safety mandates. **Operational feasibility is confirmed.**
+#### 6.7.1 Staffing Model
+
+The operational model is built on a four-tier staffing structure:
+
+- **Executive Director (1 FTE):** Cameron Kibble. Leads strategic development, partnership outreach, and day-to-day facility management.
+- **Lab Supervisors (2 FTE, salaried):** Manage equipment operations via staggered shifts covering 63 staffed hours per week, with dual-operator supervision during peak afternoon and weekend hours. Compensation is budgeted at $65,000/year per Lead Instructor plus 15-20% mandatory benefits (WorkSafeBC premiums, CPP, EI).
+- **Board of Directors:** Volunteer board of 5 professionals providing governance and legal compliance oversight.
+- **Volunteer Mentors:** 15-25 active members drawn from local professionals and senior students, contributing approximately 200 hours monthly in peer-to-peer technical support. A "train the trainer" model is employed to reduce additional paid staffing requirements over time.
+
+#### 6.7.2 Weekly Operating Schedule
+
+The facility operates 73 total hours per week across two access tiers:
+
+| Day | Staffed Hours | Self-Access Hours | Total |
+| :--- | :--- | :--- | :--- |
+| Monday - Friday | 10:00 AM - 8:00 PM (10 hrs x 5 = 50 hrs) | 8:00 PM - 10:00 PM (2 hrs x 5 = 10 hrs) | 60 hrs |
+| Saturday | 10:00 AM - 6:00 PM (8 hrs) | - | 8 hrs |
+| Sunday | 12:00 PM - 5:00 PM (5 hrs) | - | 5 hrs |
+| **Weekly Total** | **63 hours** | **10 hours** | **73 hours** |
+
+Self-access hours (weekday evenings 8:00-10:00 PM) are restricted to member card access in low-risk zones only. High-risk equipment (laser cutter, CNC router) requires staffed supervision.
+
+This schedule directly addresses survey findings: 68% of respondents preferred weekday evening access and 59% preferred weekend availability.
+
+A mandatory safety orientation protocol complies with provincial health and safety mandates. **Operational feasibility is confirmed.**
 
 ### 6.8 Schedule Feasibility
 
-A 12-month phased implementation timeline is maintained:
+A 12-month phased implementation timeline is maintained across five phases:
 
-- **Months 1 to 3:** Nonprofit incorporation and lease negotiation.
-- **Months 4 to 6:** Facility renovation and equipment commissioning.
-- **Months 7 to 9:** Soft launch, pilot workshops, and protocol testing.
-- **Months 10 to 12:** Full public launch and comprehensive evaluation.
+#### Phase 1: Foundation (Months 1-3)
+- Nonprofit incorporation under BC Societies Act
+- Lease negotiation and facility selection
+- Board of Directors recruitment
+- Initial grant applications submitted
+
+#### Phase 2: Build-Out (Months 4-6)
+- Facility renovation (electrical, ventilation, accessibility)
+- Equipment procurement and commissioning
+- Safety protocol development and WorkSafeBC compliance
+- Staff hiring and training
+
+#### Phase 3: Soft Launch (Months 7-9)
+- Pilot workshops with limited enrollment
+- Safety orientation protocol testing
+- Community feedback collection
+- Partnership formalization with School Districts 61, 62, and 63
+
+#### Phase 4: Full Launch (Months 10-12)
+- Full public launch at 73 hours/week
+- All four discipline areas operational
+- Membership enrollment drive
+- Comprehensive evaluation against KPIs
+
+#### Phase 5: Optimization (Ongoing)
+- Revenue diversification monitoring
+- Programming adjustments based on engagement analytics
+- Scale assessment for Alternative B transition
+
+**Parallel Execution:** Phases 1 and 2 have natural dependencies (lease must precede renovation), but grant applications, staff recruitment, and board development can proceed in parallel with facility selection.
+
+#### 6.8.1 Risk Triggers and Contingencies
+
+| Risk | Trigger | Contingency |
+| :--- | :--- | :--- |
+| Facility Delay | Facility partnership not secured within first 3 months | Adopt pop-up model, renting community center space for mobile workshops |
+| Funding Shortfall | Grant funding lower than projected | Scale to lean budget of $476,100 (adjusted); prioritize high-demand disciplines (3D printing at 72%, software at 58%) |
+| Low Participation | Attendance targets not met by Month 10 | Reallocate marketing budget toward free trial workshops and direct partnerships with School Districts 61, 62, and 63 |
 
 **Schedule feasibility is confirmed.**
 
 ---
 
-## 7. Conclusion and Recommendation
+## 7. Risk Assessment Summary
 
-This feasibility study confirms that the Crossroads Community STEM Centre remains viable in the 2026 economic landscape. While regional market pressures in Langford, specifically commercial real estate rates and professional wage benchmarks, have increased the Year 1 Lean Model startup requirement to $476,100, the underlying demand for accessible technical education is thoroughly validated.
+The following matrix consolidates key risks across all viability dimensions:
+
+| Risk Category | Risk | Likelihood | Impact | Mitigation |
+| :--- | :--- | :--- | :--- | :--- |
+| Financial | Lease rates exceed $32/sqft | Moderate | High | Pivot to Pop-Up Fallback Model; renegotiate or relocate |
+| Financial | Membership stalls below 120 users | Moderate | High | Free trial workshops; school district partnerships; marketing reallocation |
+| Financial | Grant funding shortfall | Moderate | Moderate | Revenue diversification (30% cap); 55% earned revenue target by Year 3 |
+| Operational | Facility not secured in 3 months | Low | High | Pop-up model with community center space |
+| Operational | Instructor recruitment difficulty | Low | Moderate | Competitive compensation ($65K + benefits); train-the-trainer volunteer model |
+| Technical | Equipment failure/downtime | Low | Moderate | $10,000 annual sinking fund; institutional surplus equipment pipeline |
+| Regulatory | WorkSafeBC compliance issues | Low | High | Mandatory orientation; dual-supervisor protocol; hazard class documentation |
+| Market | Price sensitivity ($60 vs $25-$50 preference) | Moderate | Moderate | Sliding-scale fee structure; $15 drop-in option; targeted outreach for low-income populations |
+
+---
+
+## 8. Conclusion and Recommendation
+
+This feasibility study confirms that the Crossroads Community STEM Centre remains viable in the 2026 economic landscape. While regional market pressures in Langford - specifically commercial real estate rates ($28-$30/sqft gross) and professional wage benchmarks ($65,000/year per Lead Instructor) - have increased the Year 1 Lean Model startup requirement to $476,100 (up 32.2% from the original $359,950 estimate), the underlying demand for accessible technical education is thoroughly validated.
+
+Key findings across all eight viability dimensions:
+
+- **Technical:** All equipment is commercially available; facility requirements are standard for Langford light industrial spaces.
+- **Cost:** The 2026 adjusted startup budget of $476,100 (Lean) accounts for all previously underestimated and missing cost categories.
+- **Economic:** Break-even is achievable in Month 8 with 200 members at $60/month plus diversified ancillary revenue. Earned revenue is projected at 55% of total income by Year 3.
+- **Social:** Four distinct clientele personas represent broad community demand; sliding-scale fees and a $15 drop-in option mitigate the $60 base fee's price sensitivity gap.
+- **Environmental:** Discipline-specific waste management protocols are in place; iterative prototyping minimizes material waste.
+- **Political/Legal:** Strong institutional partnerships (Camosun CTAC, VIATEC, School Districts 61/62/63) and a clear regulatory roadmap support the project.
+- **Operational:** A four-tier staffing model covers 73 weekly access hours with dual-supervisor safety coverage.
+- **Schedule:** A 12-month, five-phase implementation timeline with documented risk triggers and contingencies.
 
 **Recommendation:** The project should immediately proceed to the funding acquisition phase utilizing the adjusted Lean Model (Alternative A). The revised operational budget of $310,000 annually is sustainable given the calculated break-even threshold of 200 members and diversified ancillary revenue streams. Execution should commence with the formalization of the nonprofit society and the initiation of targeted grant applications to secure the necessary startup capital.
 
 ---
 
-## 8. References
+## 9. References
 
 [1] Statistics Canada, "Census profile, 2021 Census of Population: Langford, City [Census subdivision], British Columbia," Government of Canada, Ottawa, ON, 2023.
 

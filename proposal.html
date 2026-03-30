@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossroads Community STEM Centre - Project Proposal</title>
+    <meta name="description" content="Project proposal for the Crossroads Community STEM Centre, a nonprofit STEM makerspace in Langford, British Columbia. March 2026.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ============================================ -->
+<!-- TOP NAV                                      -->
+<!-- ============================================ -->
+<nav class="topnav" aria-label="Site navigation">
+    <ul class="topnav__list">
+        <li><a href="index.html" class="topnav__link">Dashboard</a></li>
+        <li><a href="proposal.html" class="topnav__link topnav__link--active" aria-current="page">Proposal</a></li>
+        <li><a href="feasibility.html" class="topnav__link">Feasibility Study</a></li>
+    </ul>
+</nav>
+
+<!-- ============================================ -->
+<!-- SIDEBAR NAVIGATION                           -->
+<!-- ============================================ -->
+<button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-nav" aria-label="Toggle navigation menu">
+    <span class="sidebar-toggle__bar"></span>
+    <span class="sidebar-toggle__bar"></span>
+    <span class="sidebar-toggle__bar"></span>
+</button>
+
+<nav class="sidebar" id="sidebar-nav" aria-label="Proposal sections">
+    <div class="sidebar__header">
+        <span class="sidebar__logo" aria-hidden="true">&#9670;</span>
+        <span class="sidebar__title">Crossroads</span>
+    </div>
+    <ul class="sidebar__list">
+        <li><span class="sidebar__group-label">Front Matter</span></li>
+        <li><a href="#cover" class="sidebar__link sidebar__link--active">Cover</a></li>
+        <li><a href="#executive-summary" class="sidebar__link">Executive Summary</a></li>
+
+        <li><span class="sidebar__group-label">Proposal</span></li>
+        <li><a href="#background" class="sidebar__link">1. Background</a></li>
+        <li><a href="#project-detail" class="sidebar__link">2. Project Detail</a></li>
+        <li><a href="#resources" class="sidebar__link">3. Resources</a></li>
+        <li><a href="#risk" class="sidebar__link">4. Risk &amp; Sustainability</a></li>
+        <li><a href="#evaluation" class="sidebar__link">5. Evaluation Plan</a></li>
+        <li><a href="#conclusion" class="sidebar__link">6. Conclusion</a></li>
+
+        <li><span class="sidebar__group-label">Reference</span></li>
+        <li><a href="#references" class="sidebar__link">References</a></li>
+        <li><a href="#appendices" class="sidebar__link">Appendices</a></li>
+    </ul>
+    <div class="sidebar__footer">
+        <a href="index.html" class="btn btn--small btn--outline">&larr; Dashboard</a>
+        <a href="feasibility.html" class="sidebar__footer-link btn btn--small btn--outline">Feasibility Study &rarr;</a>
+    </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- MAIN CONTENT                                 -->
+<!-- ============================================ -->
+<main class="proposal" id="main-content">
+
+    <!-- Breadcrumb -->
+    <p class="breadcrumb" aria-label="Breadcrumb">
+        Crossroads<span class="breadcrumb__separator" aria-hidden="true">&#8250;</span>Proposal<span class="breadcrumb__separator" aria-hidden="true">&#8250;</span><span id="breadcrumb-section">Cover</span>
+    </p>
+
+    <!-- ======================================== -->
+    <!-- COVER                                    -->
+    <!-- ======================================== -->
+    <header id="cover" class="section proposal__cover">
+        <h1 class="proposal__cover-title">Crossroads Community STEM Centre</h1>
+        <p class="proposal__cover-subtitle">Project Proposal - Open-Access STEM Education for Langford, BC</p>
+        <p class="proposal__cover-date">March 11, 2026</p>
+        <p class="proposal__cover-author">Cameron Kibble</p>
+        <p class="proposal__cover-org">Founder, Crossroads Community Hub</p>
+        <p class="proposal__cover-address">3100 Foul Bay Road, Victoria, BC V8P 5J2, Canada</p>
+        <p class="proposal__cover-address proposal__cover-prepared">Prepared for: Jasmine North, Department of English, Camosun College</p>
+    </header>
+
+    <!-- ======================================== -->
+    <!-- EXECUTIVE SUMMARY                        -->
+    <!-- ======================================== -->
+    <section id="executive-summary" class="section">
+        <h2 class="section__heading">Executive Summary</h2>
+        <p>Langford, British Columbia (population 63,120; 3.95% annual growth), lacks a centralized facility for accessible, hands-on STEM education [1]. While the University of Victoria (approximately 22,000 students) and Camosun College (approximately 19,000 learners) provide institutional lab access, these resources are restricted to enrolled students during designated hours. The Victoria Makerspace, the region&rsquo;s primary alternative, operates on an application-based membership model with limited hours and a narrow disciplinary focus. Crossroads Community STEM Centre addresses this gap by providing open-access, beginner-friendly programming across four focused disciplines: Robotics and Electronics, Digital Fabrication, Software Development, and Creative Design.</p>
+        <p>The facility will operate on a drop-in model with tiered staffed hours (~63 supervised hours per week across seven days) and sliding-scale fees. All participants complete a mandatory 30-minute safety orientation before accessing equipment, satisfying WorkSafeBC requirements [3] while maintaining a low barrier to entry. The facility provides equitable access to tools regardless of income or affiliation.</p>
+        <p>The project requires a first-year startup investment of $359,950 (lean, 4,000 sqft) to $577,300 (expanded, 6,000 sqft), indexed to current Langford commercial lease rates of $16 to $22 per square foot net plus Triple Net (NNN) costs. Long-term sustainability is achieved through diversified revenue, with no single funding source exceeding 30 percent of total income, and a projected transition to 55 percent earned revenue by Year 3. A break-even analysis (Table 4) demonstrates that monthly revenue targets exceed operating costs, with the surplus designated for the 15 percent contingency reserve. I request your review and approval of this proposal to begin the institutional partnership and funding acquisition phases.</p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 1. BACKGROUND                            -->
+    <!-- ======================================== -->
+    <section id="background" class="section">
+        <h2 class="section__heading">1. Background Information and Statement of the Problem</h2>
+        <p>Langford is Vancouver Island&rsquo;s fastest-growing municipality, with a 2026 projected population of 63,120 and a 3.95 percent year-over-year growth rate [1]. Despite this expansion, the West Shore region lacks a centralized, open-access facility where residents can develop practical technical skills outside of formal enrollment at a post-secondary institution. Access to advanced tools and lab environments in Canada is concentrated within universities and colleges that impose tuition, enrollment, and scheduling barriers. Residents who are not enrolled students, including career changers, youth exploring STEM interests, and retirees with technical expertise, have no local facility offering structured, hands-on access to industrial-grade equipment.</p>
+        <p>A closer examination of existing alternatives confirms this gap. The Victoria Makerspace, the primary local facility, operates on an application-based membership model with limited operating hours and a club-oriented atmosphere focused on a narrow range of hobbyist disciplines. Community feedback on public forums consistently identifies barriers for beginners and a lack of structured programming. The University of Victoria and Camosun College maintain well-equipped labs, but access is restricted to enrolled students during designated hours. A preliminary needs assessment survey of 54 respondents in the Langford and Greater Victoria area (<a href="#appendix-f">Appendix F</a>) indicates that 78 percent of respondents identified &ldquo;lack of affordable access to tools and lab space&rdquo; as the primary barrier to developing technical skills, and 65 percent expressed interest in a drop-in community STEM facility.</p>
+        <p>The British Columbia Ministry of Education&rsquo;s Applied Design, Skills, and Technologies (ADST) curriculum emphasizes experiential learning, prototyping, and iterative design across K-12 education [4]. However, students leaving the K-12 system have limited options to continue this hands-on learning outside of post-secondary enrollment. Crossroads extends the ADST model into the community setting, bridging the gap between secondary education and professional practice.</p>
+        <p>Research supports this approach. Kolb&rsquo;s experiential learning cycle demonstrates that concrete experience and active experimentation produce deeper understanding and higher retention than passive instruction [5][6]. Oldenburg&rsquo;s concept of the &ldquo;third place&rdquo; describes an informal gathering space, distinct from home and work, that anchors community life and levels social hierarchies [7][8]. Crossroads combines these frameworks: a third-place facility where residents learn through direct interaction with professional-grade tools, supported by structured mentorship and peer collaboration.</p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 2. PROJECT DETAIL                        -->
+    <!-- ======================================== -->
+    <section id="project-detail" class="section">
+        <h2 class="section__heading">2. Project Detail</h2>
+
+        <h3>a. Goals and Objectives</h3>
+        <ul>
+            <li><strong>Focused Facility:</strong> Establish four modular zones (Main Lab, Collaboration Space, Learning Commons, and Community Area) within six months of securing a facility.</li>
+            <li><strong>Equitable Access:</strong> Provide 3D printers, laser cutters, electronics workstations, and design tools via a sliding-scale fee structure.</li>
+            <li><strong>Mentorship:</strong> Pair participants with professional mentors to support situated learning and skill transfer.</li>
+            <li><strong>Tangible Outcomes:</strong> Structure every session to produce a deliverable, such as a prototype, coded application, or design artifact.</li>
+            <li><strong>Financial Sustainability:</strong> Maintain diversified revenue with no single funding source exceeding 30 percent of total income.</li>
+        </ul>
+
+        <h3>b. Clientele</h3>
+        <p>The drop-in model targets specific demographics within the Greater Victoria region. Four primary users guide program design (see <a href="#appendix-g">Table 5 in Appendix G</a> for detailed breakdowns): Curious Beginners (35%), Experienced Makers (25%), Students and Educators (25%), and Community Builders (15%).</p>
+        <p>Key target populations include youth (ages 12 to 18) focusing on out-of-school STEM development, post-secondary students requiring supplementary tool access, adult career changers seeking flexible non-traditional schedules [6], and retirees contributing as volunteer mentors. Targeted outreach for low-income and Indigenous youth will ensure equitable access to resources.</p>
+
+        <h3>c. Methods and Action Plan</h3>
+        <p>Crossroads will operate as a drop-in community learning center with tiered staffed hours across four core program areas:</p>
+        <div class="proposal__program-grid">
+            <div class="proposal__program-card">
+                <h4>Robotics &amp; Electronics</h4>
+                <p>Arduino and Raspberry Pi kits, soldering stations, oscilloscopes, component inventory, and test benches for circuit design and embedded systems.</p>
+            </div>
+            <div class="proposal__program-card">
+                <h4>Digital Fabrication</h4>
+                <p>FDM 3D printers, a 40W CO2 laser cutter, a benchtop CNC router, and materials for rapid prototyping and mechanical design.</p>
+            </div>
+            <div class="proposal__program-card">
+                <h4>Software Development</h4>
+                <p>Workstations equipped with IDEs, networking equipment, and tools for web development, data analysis, and introductory cybersecurity.</p>
+            </div>
+            <div class="proposal__program-card">
+                <h4>Creative &amp; Applied Design</h4>
+                <p>Design software licenses, drawing tablets, physical modelling tools, and display space for artistic and technical showcases.</p>
+            </div>
+        </div>
+
+        <h4>Operating Hours (Tiered Model)</h4>
+        <p>Staffed hours with on-site safety supervisors will cover 63 hours per week: Monday through Friday, 10:00 AM to 8:00 PM (50 hours); Saturday, 10:00 AM to 6:00 PM (8 hours); and Sunday, 12:00 PM to 5:00 PM (5 hours). Member self-access to low-risk zones will be available Monday through Friday from 8:00 PM to 10:00 PM via card access (10 additional hours). This tiered model provides 73 hours of weekly access.</p>
+
+        <h4>Safety Orientation</h4>
+        <p>All new participants complete a mandatory 30-minute safety orientation (offered free of charge) before accessing any equipment. This orientation covers facility rules, emergency procedures, and equipment-specific hazards per WorkSafeBC guidelines [3]. Any individual who completes the orientation may immediately use the facility on a drop-in basis.</p>
+
+        <h4>Implementation Phases</h4>
+        <ol class="proposal__phase-list">
+            <li><strong>Phase 1 - Legal Formation</strong><p>Register as a nonprofit society in British Columbia (requiring five directors) and draft organizational bylaws [11].</p></li>
+            <li><strong>Phase 2 - Partnerships</strong><p>Formalize agreements with Camosun College and local industry, including a Memorandum of Understanding for equipment surplus transfers.</p></li>
+            <li><strong>Phase 3 - Acquisition</strong><p>Secure tools through surplus agreements and corporate donations to reduce capital expenditure.</p></li>
+            <li><strong>Phase 4 - Pilot Program</strong><p>Launch introductory workshops and safety orientation programming.</p></li>
+            <li><strong>Phase 5 - Evaluation</strong><p>Use participant data and placement rates to assess and scale operations.</p></li>
+        </ol>
+
+        <h3>d. Staff and Administration</h3>
+        <div class="proposal__role-list">
+            <div class="proposal__role-card">
+                <h4>Executive Director</h4>
+                <p>Cameron Kibble will lead strategic development and partnership outreach full-time.</p>
+            </div>
+            <div class="proposal__role-card">
+                <h4>Board of Directors</h4>
+                <p>A volunteer board of five professionals will oversee governance and legal compliance [11].</p>
+            </div>
+            <div class="proposal__role-card">
+                <h4>Lab Supervisors</h4>
+                <p>Two full-time, salaried staff members will manage equipment via staggered shifts covering 63 staffed hours per week with dual-operator supervision during peak hours.</p>
+            </div>
+            <div class="proposal__role-card">
+                <h4>Volunteer Mentors</h4>
+                <p>Local professionals and senior students (15 to 25 active members contributing ~200 hours monthly) will provide peer-to-peer technical support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 3. RESOURCES                             -->
+    <!-- ======================================== -->
+    <section id="resources" class="section">
+        <h2 class="section__heading">3. Resources</h2>
+
+        <h3>a. Available Resources</h3>
+        <ul>
+            <li><strong>Institutional Partnerships:</strong> Preliminary discussions with Camosun College&rsquo;s Technology Access Centre (CTAC) and the University of Victoria indicate willingness to collaborate on student placements and limited equipment transfers [12].</li>
+            <li><strong>Surplus Equipment:</strong> Post-secondary institutions routinely decommission functional equipment. This surplus is projected to offset $15,000 to $30,000 of startup equipment costs.</li>
+            <li><strong>Business Support:</strong> VIATEC provides access to over 900 potential corporate sponsors and mentors.</li>
+            <li><strong>Personnel:</strong> Two full-time safety instructors required immediately. A &ldquo;train the trainer&rdquo; model will reduce additional paid staffing needs over time.</li>
+        </ul>
+
+        <h3>b. Facilities</h3>
+        <p>A 4,000 to 6,000 square foot facility is required, featuring 200-amp electrical service, industrial ventilation, and compliance with the Accessible Canada Act. Current Langford commercial lease rates: McCallum Road Industrial at $16.00/sqft net + NNN, West Shore Parkway Industrial at $18.00/sqft net + NNN, Amy Road Commercial at $22.00/sqft net + NNN.</p>
+
+        <h3>c. Equipment, Supplies, and Communication</h3>
+        <p>Equipment required across four core disciplines includes FDM 3D printers (2-4 units), one 40W CO2 laser cutter, one benchtop CNC router, 20 Arduino Uno R4 starter kits, 10 Raspberry Pi 5 kits, 6 soldering stations, 4 benchtop oscilloscopes, 10-15 computing workstations, design software licenses, and 6 drawing tablets.</p>
+
+        <h3>d. Budget</h3>
+        <div class="proposal__budget-tiers">
+            <div class="proposal__budget-tier">
+                <h3>Lean Financial Model <span class="proposal__budget-amount">$359,950 CAD</span></h3>
+                <p>4,000 sqft facility, core equipment clusters (3D printing, electronics, computing), first year of safety staffing, and a 15 percent contingency reserve.</p>
+            </div>
+            <div class="proposal__budget-tier">
+                <h3>Expanded Model <span class="proposal__budget-amount">$577,300 CAD</span></h3>
+                <p>6,000 sqft facility, additional industrial equipment (CNC, expanded fabrication lab), higher-performance computing, dedicated business fiber internet.</p>
+            </div>
+        </div>
+
+        <h4>Table 1: Student Labor Expenditure (Pre-Launch Phase)</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Phase</th>
+                        <th class="table__cell table__cell--header">Estimated Hours</th>
+                        <th class="table__cell table__cell--header">Cost ($20/hr)</th>
+                        <th class="table__cell table__cell--header">Deliverables</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Conceptual Design</td><td class="table__cell">150</td><td class="table__cell">$3,000</td><td class="table__cell">Vision docs, stakeholder pitches</td></tr>
+                    <tr><td class="table__cell">Detailed Design and Legal</td><td class="table__cell">200</td><td class="table__cell">$4,000</td><td class="table__cell">Site layout, nonprofit bylaws</td></tr>
+                    <tr><td class="table__cell">Fabrication and Setup</td><td class="table__cell">500</td><td class="table__cell">$10,000</td><td class="table__cell">Equipment install, zone modularity</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Total Labor</strong></td><td class="table__cell"><strong>850</strong></td><td class="table__cell"><strong>$17,000</strong></td><td class="table__cell"></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Table 2: Estimated Startup Budget Summary</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Category</th>
+                        <th class="table__cell table__cell--header">Low Estimate (CAD)</th>
+                        <th class="table__cell table__cell--header">High Estimate (CAD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Equipment and Tooling</td><td class="table__cell">$60,000</td><td class="table__cell">$120,000</td></tr>
+                    <tr><td class="table__cell">Inventory and Supplies</td><td class="table__cell">$10,000</td><td class="table__cell">$25,000</td></tr>
+                    <tr><td class="table__cell">Staff Hiring and Training</td><td class="table__cell">$15,000</td><td class="table__cell">$40,000</td></tr>
+                    <tr><td class="table__cell">Product Development</td><td class="table__cell">$5,000</td><td class="table__cell">$15,000</td></tr>
+                    <tr><td class="table__cell">Branding and Marketing</td><td class="table__cell">$5,000</td><td class="table__cell">$20,000</td></tr>
+                    <tr><td class="table__cell">Legal and Accounting</td><td class="table__cell">$6,000</td><td class="table__cell">$20,000</td></tr>
+                    <tr><td class="table__cell">Miscellaneous</td><td class="table__cell">$5,000</td><td class="table__cell">$15,000</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Total</strong></td><td class="table__cell"><strong>$106,000</strong></td><td class="table__cell"><strong>$255,000</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Table 3: Integrated Startup Budget (First Year)</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Expense Category</th>
+                        <th class="table__cell table__cell--header">Description</th>
+                        <th class="table__cell table__cell--header">Lean (CAD)</th>
+                        <th class="table__cell table__cell--header">Expanded (CAD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Personnel (Salaries)</td><td class="table__cell">2 Safety Instructors + Admin Support</td><td class="table__cell">$110,000</td><td class="table__cell">$160,000</td></tr>
+                    <tr><td class="table__cell">Equipment and Tooling</td><td class="table__cell">3D printers, CNC, electronics, design tools</td><td class="table__cell">$60,000</td><td class="table__cell">$120,000</td></tr>
+                    <tr><td class="table__cell">Facility Operations</td><td class="table__cell">12 months rent (Langford, inc. NNN), utilities, internet</td><td class="table__cell">$96,000</td><td class="table__cell">$150,000</td></tr>
+                    <tr><td class="table__cell">Legal and Insurance</td><td class="table__cell">High-risk liability coverage + nonprofit incorporation</td><td class="table__cell">$20,000</td><td class="table__cell">$35,000</td></tr>
+                    <tr><td class="table__cell">Marketing and Outreach</td><td class="table__cell">School district outreach, branding, signage</td><td class="table__cell">$10,000</td><td class="table__cell">$20,000</td></tr>
+                    <tr><td class="table__cell">Development Labor</td><td class="table__cell">Student labor from Table 1</td><td class="table__cell">$17,000</td><td class="table__cell">$17,000</td></tr>
+                    <tr><td class="table__cell">Contingency (15%)</td><td class="table__cell">Emergency repairs and working capital</td><td class="table__cell">$46,950</td><td class="table__cell">$75,300</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Total</strong></td><td class="table__cell"></td><td class="table__cell"><strong>$359,950</strong></td><td class="table__cell"><strong>$577,300</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p><em>Note: Table 2 provides a categorical summary of startup capital costs. Table 3 integrates those costs with ongoing first-year operational expenses, development labor, and a 15 percent contingency reserve. Facility operations reflect current Langford industrial lease rates of $16 to $22 per sqft net plus $6 to $9 per sqft NNN.</em></p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 4. RISK & SUSTAINABILITY                 -->
+    <!-- ======================================== -->
+    <section id="risk" class="section">
+        <h2 class="section__heading">4. Risk Mitigation and Sustainability Plan</h2>
+
+        <h3>4.1 Risk Mitigation Strategy</h3>
+        <ul>
+            <li><strong>Facility Delay:</strong> If a facility partnership is not secured within the first three months, Crossroads will adopt a &ldquo;pop-up&rdquo; model, renting community center space for mobile workshops.</li>
+            <li><strong>Funding Shortfall:</strong> If grant funding is lower than projected, the project will scale to the lean budget of $359,950. Initial offerings will prioritize high-demand disciplines.</li>
+            <li><strong>Low Participation:</strong> If attendance targets are not met, the marketing budget will be reallocated toward free trial workshops and direct partnerships with School Districts 61, 62, and 63.</li>
+        </ul>
+
+        <h3>4.2 Long-term Sustainability Plan</h3>
+        <p>Revenue will be generated through multiple channels: workshop fees, monthly memberships, equipment surcharges, corporate training contracts, event hosting, and grant funding. No individual funding source exceeds 30 percent of total revenue. Earned revenue is projected to reach 55 percent of total income by Year 3.</p>
+
+        <h4>Table 4: Monthly Break-Even Analysis (Lean Budget)</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Revenue Source</th>
+                        <th class="table__cell table__cell--header">Unit Price</th>
+                        <th class="table__cell table__cell--header">Monthly Target</th>
+                        <th class="table__cell table__cell--header">Monthly Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Individual Memberships</td><td class="table__cell">$50/month</td><td class="table__cell">160 members</td><td class="table__cell">$8,000</td></tr>
+                    <tr><td class="table__cell">Drop-in Day Passes</td><td class="table__cell">$15/visit</td><td class="table__cell">200 visits</td><td class="table__cell">$3,000</td></tr>
+                    <tr><td class="table__cell">Workshop Fees (avg.)</td><td class="table__cell">$40/attendee</td><td class="table__cell">200 attendees</td><td class="table__cell">$8,000</td></tr>
+                    <tr><td class="table__cell">Corporate Training</td><td class="table__cell">$500/session</td><td class="table__cell">6 sessions</td><td class="table__cell">$3,000</td></tr>
+                    <tr><td class="table__cell">Equipment Surcharges</td><td class="table__cell">$15/booking</td><td class="table__cell">175 bookings</td><td class="table__cell">$2,625</td></tr>
+                    <tr><td class="table__cell">Event and Room Rental</td><td class="table__cell">$250/event</td><td class="table__cell">5 events</td><td class="table__cell">$1,250</td></tr>
+                    <tr><td class="table__cell">Grants and Sponsorships</td><td class="table__cell">-</td><td class="table__cell">-</td><td class="table__cell">$8,125</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Total Monthly Revenue</strong></td><td class="table__cell"></td><td class="table__cell"></td><td class="table__cell"><strong>$34,000</strong></td></tr>
+                    <tr><td class="table__cell"><strong>Monthly Operating Cost (Lean)</strong></td><td class="table__cell"></td><td class="table__cell"></td><td class="table__cell"><strong>$30,000</strong></td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Monthly Surplus (to Contingency Reserve)</strong></td><td class="table__cell"></td><td class="table__cell"></td><td class="table__cell"><strong>$4,000</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The $4,000 monthly surplus ($48,000 annually) is designated for the 15 percent contingency reserve ($46,950 in the lean budget), ensuring that the contingency fund is self-replenishing. Break-even requires approximately 160 paying members, consistent workshop attendance, and $97,500 per year in grant and sponsorship funding.</p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 5. EVALUATION PLAN                       -->
+    <!-- ======================================== -->
+    <section id="evaluation" class="section">
+        <h2 class="section__heading">5. Evaluation Plan</h2>
+        <div class="proposal__outcomes">
+            <div class="proposal__outcome-card">
+                <h4>Engagement Analytics</h4>
+                <p>Number of active monthly participants and average hours on-site. Year 1 targets: 150 unique participants per quarter. Year 3: 500 participants per quarter and a 60% return rate.</p>
+            </div>
+            <div class="proposal__outcome-card">
+                <h4>Employment Pipelines</h4>
+                <p>Growth of student internship placements and member career transitions into technical roles.</p>
+            </div>
+            <div class="proposal__outcome-card">
+                <h4>Social Impact Data</h4>
+                <p>Member surveys tracking self-reported improvements in well-being, skill confidence, and community connectivity.</p>
+            </div>
+            <div class="proposal__outcome-card">
+                <h4>Institutional Partnerships</h4>
+                <p>A minimum of four annual partnerships with local schools and businesses to sustain programming.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 6. CONCLUSION                            -->
+    <!-- ======================================== -->
+    <section id="conclusion" class="section">
+        <h2 class="section__heading">6. Conclusion and Action Statement</h2>
+        <p>Crossroads Community STEM Centre addresses a documented gap in Langford&rsquo;s infrastructure: the absence of an open-access facility where residents can develop practical technical skills without post-secondary enrollment. With a population growing at 5.0 percent annually and no comparable local facility, the demand for accessible STEM education is supported by both regional growth data and resident survey feedback (<a href="#appendix-f">Appendix F</a>) [9].</p>
+        <p>The first-year investment of $359,950 to $577,300 reflects current Langford lease rates and realistic equipment costs. The diversified revenue strategy, validated through the break-even analysis in Table 4, provides a clear path to financial sustainability by Year 3: monthly revenue of $34,000 against $30,000 in operating costs generates a $4,000 surplus that self-funds the contingency reserve.</p>
+        <div class="proposal__cta">
+            <p><strong>Action Requested:</strong> I formally request your approval of this proposal. Your authorization will allow advancement to the next phase: securing seed funding and formalizing institutional partnerships with Camosun College. Please respond by Friday, March 20, 2026.</p>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 7. REFERENCES                            -->
+    <!-- ======================================== -->
+    <section id="references" class="section">
+        <h2 class="section__heading">7. References</h2>
+        <ol class="references-list">
+            <li>R. Oldenburg, <em>The Great Good Place</em>, 3rd ed. New York, NY: Da Capo Press, 1999.</li>
+            <li>Statistics Canada, &ldquo;Census profile, 2021 Census of Population: Langford, City [Census subdivision], British Columbia,&rdquo; Government of Canada, Ottawa, ON, 2023.</li>
+            <li>British Columbia Ministry of Education, &ldquo;Student Learning Survey: Provincial results,&rdquo; Victoria, BC, 2023.</li>
+            <li>D. A. Kolb, <em>Experiential Learning</em>, 2nd ed. Upper Saddle River, NJ: Pearson Education, 2015.</li>
+            <li>A. Y. Kolb and D. A. Kolb, &ldquo;Learning styles and learning spaces,&rdquo; <em>Academy of Management Learning and Education</em>, vol. 4, no. 2, pp. 193-212, Jun. 2005.</li>
+            <li>Council of Canadian Academies, &ldquo;Some Assembly Required: STEM Skills and Canada&rsquo;s Economic Productivity,&rdquo; Ottawa, ON, 2015.</li>
+            <li>R. Willett, &ldquo;Making, makers, and makerspaces,&rdquo; <em>The Library Quarterly</em>, vol. 86, no. 3, pp. 313-329, Jul. 2016.</li>
+            <li>D. Oblinger, Ed., <em>Learning Spaces</em>. Boulder, CO: EDUCAUSE, 2006.</li>
+            <li>National Research Council, <em>Identifying and Supporting Productive STEM Programs in Out-of-School Settings</em>. Washington, DC: The National Academies Press, 2015.</li>
+            <li>J. Lave and E. Wenger, <em>Situated Learning: Legitimate Peripheral Participation</em>. Cambridge, UK: Cambridge University Press, 1991.</li>
+            <li>WorkSafeBC, &ldquo;Education health and safety guidelines,&rdquo; Richmond, BC, 2024.</li>
+            <li>Canada Not-for-profit Corporations Act, S.C. 2009, c. 23. Government of Canada, Ottawa, ON, 2009.</li>
+            <li>British Columbia Ministry of Education, &ldquo;Applied design, skills, and technologies curriculum,&rdquo; Victoria, BC, 2024.</li>
+            <li>Imagine Canada, &ldquo;Sector Monitor and Research,&rdquo; Ottawa, ON, 2024.</li>
+            <li>Innovation, Science and Economic Development Canada, &ldquo;SME Research and Statistics,&rdquo; Government of Canada, Ottawa, ON, 2023.</li>
+            <li>M. Rahman and M. Best, &ldquo;Sustainability of makerspaces,&rdquo; <em>ACM Journal on Computing and Sustainable Societies</em>, vol. 2, no. 3, art. 33, pp. 1-20, Sep. 2024.</li>
+            <li>S. Fox, R. R. Ulgado, and D. Rosner, &ldquo;Hacking culture, not devices,&rdquo; in <em>Proc. 18th ACM CSCW</em>, New York, NY: ACM, 2015, pp. 56-68.</li>
+        </ol>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 8. APPENDICES                            -->
+    <!-- ======================================== -->
+    <section id="appendices" class="section">
+        <h2 class="section__heading">8. Appendices</h2>
+
+        <h3 id="appendix-a">Appendix A: Equipment Safety by Discipline</h3>
+        <ul>
+            <li><strong>Robotics and Electronics:</strong> Requires soldering ventilation, ESD-safe workstations, battery fire-safe storage, and eye protection for component work.</li>
+            <li><strong>Digital Fabrication:</strong> Requires machine guarding on CNC router, dust collection system, laser safety enclosure, and face shields for material cutting operations.</li>
+            <li><strong>Software Development:</strong> Standard workstation ergonomics; no high-risk equipment. UPS battery backup for data protection.</li>
+            <li><strong>Creative and Applied Design:</strong> Requires ventilation for adhesives and spray materials, blade safety protocols for physical modelling, and proper lighting standards.</li>
+        </ul>
+
+        <h3 id="appendix-b">Appendix B: Implementation Timeline</h3>
+        <div class="proposal__timeline-grid">
+            <div class="proposal__timeline-card">
+                <strong>Months 1 to 3</strong>
+                <p>Incorporate nonprofit and secure seed funding.</p>
+            </div>
+            <div class="proposal__timeline-card">
+                <strong>Months 4 to 6</strong>
+                <p>Facility renovation and equipment installation.</p>
+            </div>
+            <div class="proposal__timeline-card">
+                <strong>Months 7 to 9</strong>
+                <p>Soft launch for founding members and pilot workshops.</p>
+            </div>
+            <div class="proposal__timeline-card">
+                <strong>Months 10 to 12</strong>
+                <p>Full public launch and first annual impact report.</p>
+            </div>
+        </div>
+
+        <h3 id="appendix-c">Appendix C: Legal Structure Options</h3>
+        <p><strong>BC Benefit Company:</strong> A hybrid corporate structure that allows for-profit operations while mandating a stated public benefit. Offers flexibility in raising capital and may appeal to impact investors.</p>
+        <p><strong>BC Nonprofit Society (Charity):</strong> Incorporation under the BC Societies Act requires a minimum of five directors. Preferred for maximizing eligibility for government grants and philanthropic donations. The founding team&rsquo;s current recommendation is to incorporate as a nonprofit society, with the option to establish a subsidiary benefit company for commercial revenue streams as the organization matures.</p>
+
+        <h3 id="appendix-d">Appendix D: Community Outreach Letter Template</h3>
+        <p><em>Subject: Partnership Inquiry - Crossroads Community STEM Learning Hub</em></p>
+        <p>Dear [Recipient Name],</p>
+        <p>My name is Cameron Kibble, and I am the founder of Crossroads Community Hub, a proposed nonprofit STEM learning center planned for Langford, British Columbia. I am reaching out to explore potential partnership opportunities between your organization and Crossroads. Our mission is to provide accessible, hands-on technical education and mentorship to community members of all ages and skill levels.</p>
+        <p>Respectfully,<br>Cameron Kibble, Founder, Crossroads Community Hub<br>3100 Foul Bay Road, Victoria, BC V8P 5J2</p>
+
+        <h3 id="appendix-e">Appendix E: Makerspace Research Questionnaire</h3>
+        <ol>
+            <li>What is the primary mission or purpose of your makerspace?</li>
+            <li>How do you structure membership or access fees? Do you offer sliding-scale or subsidized options?</li>
+            <li>What disciplines or tool categories generate the highest demand?</li>
+            <li>What are the most significant operational challenges you face?</li>
+            <li>How do you handle safety training and certification for members?</li>
+            <li>What revenue streams beyond membership fees have proven most sustainable?</li>
+            <li>How do you engage volunteers and mentors in day-to-day operations?</li>
+            <li>What role does digital infrastructure play in your operations?</li>
+            <li>How do you measure community impact or social outcomes?</li>
+            <li>What advice would you offer to a new makerspace launching in a mid-sized Canadian municipality?</li>
+        </ol>
+
+        <h3 id="appendix-f">Appendix F: Community Needs Assessment Survey</h3>
+        <p>The following survey was distributed to 54 respondents in the Langford and Greater Victoria area (February 2026) via online distribution and in-person collection at community events.</p>
+        <h4>Survey Instrument</h4>
+        <ol>
+            <li>What is your age range? (Under 18 / 18-24 / 25-34 / 35-49 / 50-64 / 65+)</li>
+            <li>What is your current relationship with STEM education?</li>
+            <li>Have you used a makerspace, fab lab, or community workshop before?</li>
+            <li>If yes, what barriers or limitations did you experience?</li>
+            <li>What is the primary barrier preventing you from developing technical skills?</li>
+            <li>Would you use a drop-in community STEM facility in the Langford area if one were available?</li>
+            <li>What technical areas interest you most?</li>
+            <li>How much would you be willing to pay per month for membership access?</li>
+            <li>What days and times would be most convenient for you to visit?</li>
+            <li>Any additional comments about what you would want from a community STEM facility?</li>
+        </ol>
+        <h4>Summary of Key Findings (n=54)</h4>
+        <ul>
+            <li>78% identified &ldquo;lack of affordable access to tools and lab space&rdquo; as their primary barrier.</li>
+            <li>65% indicated they would &ldquo;definitely&rdquo; or &ldquo;probably&rdquo; use a drop-in community STEM facility.</li>
+            <li>Most requested disciplines: 3D Printing/Fabrication (72%), Software Development (58%), Robotics/Electronics (54%), Creative Design (41%).</li>
+            <li>61% preferred a monthly membership fee in the $25-$50 range.</li>
+            <li>Peak preferred times: weekday evenings (68%) and weekends (59%).</li>
+        </ul>
+
+        <h3 id="appendix-g">Appendix G: Clientele Personas</h3>
+        <h4>Table 5: Clientele Personas</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Persona</th>
+                        <th class="table__cell table__cell--header">Demographics</th>
+                        <th class="table__cell table__cell--header">Primary Needs</th>
+                        <th class="table__cell table__cell--header">Est. Share</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Curious Beginners</td><td class="table__cell">All ages, no prior technical experience</td><td class="table__cell">Low-pressure environment to explore STEM interests</td><td class="table__cell">35%</td></tr>
+                    <tr><td class="table__cell">Experienced Makers</td><td class="table__cell">Hobbyists and professionals</td><td class="table__cell">Industrial-grade tools not available in home workshops; collaborative community</td><td class="table__cell">25%</td></tr>
+                    <tr><td class="table__cell">Students and Educators</td><td class="table__cell">Post-secondary students; K-12 teachers</td><td class="table__cell">Supplementary lab time beyond institutional hours; ADST curriculum resources</td><td class="table__cell">25%</td></tr>
+                    <tr><td class="table__cell">Community Builders</td><td class="table__cell">Retirees, volunteers</td><td class="table__cell">Social connection through mentorship, event organization, and peer support</td><td class="table__cell">15%</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<!-- ============================================ -->
+<!-- FOOTER                                       -->
+<!-- ============================================ -->
+<footer class="site-footer">
+    <p class="site-footer__text">&copy; 2026 Crossroads Community Hub. Project proposal - Cameron Kibble. This document is an academic submission, not a commercial offering.</p>
+</footer>
+
+<script>
+/* Sidebar toggle + scroll-spy + breadcrumb */
+(function () {
+    var toggle = document.getElementById('sidebar-toggle');
+    var sidebar = document.getElementById('sidebar-nav');
+    if (!toggle || !sidebar) return;
+
+    toggle.addEventListener('click', function () {
+        var open = sidebar.classList.toggle('sidebar--open');
+        toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    /* Scroll-spy for sidebar links */
+    var links = sidebar.querySelectorAll('.sidebar__link');
+    var sections = [];
+    links.forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ el: el, link: a });
+    });
+
+    var breadcrumbSpan = document.getElementById('breadcrumb-section');
+
+    function updateActive() {
+        var scrollY = window.scrollY + 120;
+        var active = sections[0];
+        for (var i = 0; i < sections.length; i++) {
+            if (sections[i].el.offsetTop <= scrollY) active = sections[i];
+        }
+        links.forEach(function (a) {
+            a.classList.remove('sidebar__link--active');
+            a.removeAttribute('aria-current');
+        });
+        if (active) {
+            active.link.classList.add('sidebar__link--active');
+            active.link.setAttribute('aria-current', 'true');
+            if (breadcrumbSpan) breadcrumbSpan.textContent = active.link.textContent;
+        }
+    }
+
+    var raf;
+    window.addEventListener('scroll', function () {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(updateActive);
+    }, { passive: true });
+    updateActive();
+})();
+</script>
+
+</body>
+</html>

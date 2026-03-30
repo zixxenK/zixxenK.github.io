@@ -1,38 +1,47 @@
-# Crossroads Community STEM Centre
+﻿# Crossroads Community STEM Centre
 
-A proposal and feasibility study for an open-access community STEM learning hub in Langford, British Columbia, paired with an interactive pitch-deck website and a Markdown-to-Word document converter.
+A proposal and feasibility study for an open-access community STEM learning hub in Langford, British Columbia, presented through a 3-page interactive website and supported by a Markdown-to-Word document converter.
+
+---
+
+## Website (3 Pages)
+
+| Page | File | Description |
+|------|------|-------------|
+| **Dashboard** | `index.html` | Interactive feasibility simulation with Plotly.js charts, revenue/cost sliders, break-even engine, sensitivity analysis, and scenario presets. |
+| **Proposal** | `proposal.html` | Full March 2026 project proposal with executive summary, budget tables (Tables 1-4), risk mitigation plan, evaluation plan, references (17), and appendices A-G. |
+| **Feasibility Study** | `feasibility.html` | Feasibility study with KPI cards, Plotly charts, assessment-card grids, visual timeline, risk matrix, and expandable detail sections covering all viability dimensions. |
+
+All three pages share a persistent **top navigation bar**, **grouped sidebar** with scroll-spy, and **breadcrumb** trail that updates on scroll.
+
+### To View
+
+Open `index.html` in any modern browser. An internet connection is required on first load for the Plotly.js CDN (used by Dashboard and Feasibility pages; `proposal.html` is fully self-contained).
+
+### Shared Assets
+
+- `style.css` - Design tokens, BEM component library, responsive breakpoints, print styles
+- `script.js` - Dashboard data model, Plotly chart rendering, simulator logic, sidebar scroll-spy
 
 ---
 
 ## Repository Structure
 
 ```
-Crossroads/
-├── CRinteractivewebsite.html        # Interactive single-page pitch deck (open in a browser)
-├── convert_convert.py               # Markdown → professional .docx converter
-├── experiment_data.csv              # Supporting measurement data
-├── Crossroads Business Plan.*       # Business plan (PDF / DOCX / Pages)
-├── Crossroads Project proposal.pdf  # Project proposal PDF
-└── Crossroads_Proposal_v*.docx      # Iterative proposal drafts
-project feasibility                  # Feasibility study (Markdown)
+├── index.html                        # Dashboard (feasibility simulation)
+├── proposal.html                     # Project proposal (March 2026)
+├── feasibility.html                  # Feasibility study
+├── style.css                         # Shared stylesheet
+├── script.js                         # Dashboard logic and sidebar
+├── project feasibility               # Feasibility study source (Markdown)
+├── README.md
+└── Crossroads/
+    ├── CRinteractivewebsite.html     # Legacy single-page pitch deck
+    ├── convert_convert.py            # Markdown → .docx converter
+    ├── experiment_data.csv           # Supporting measurement data
+    ├── Copy2 of Crossroads Project .md  # 2026 proposal source (Markdown)
+    └── ...                           # Business plan files, Pages docs
 ```
-
----
-
-## Interactive Website
-
-`Crossroads/CRinteractivewebsite.html` is a fully self-contained, single-page presentation built with [Tailwind CSS](https://tailwindcss.com/) and [Chart.js](https://www.chartjs.org/) (both loaded from CDN). No build step is required.
-
-**To view it:**
-
-1. Open `Crossroads/CRinteractivewebsite.html` in any modern web browser.
-2. An internet connection is required on first load to fetch the CDN assets (Tailwind, Chart.js, Google Fonts).
-
-The page includes:
-- Mission and vision overview
-- Interactive grid explorer for 15 STEM disciplines
-- Financial charts (space allocation, 3-year revenue growth, startup cost breakdown)
-- Clickable implementation timeline
 
 ---
 
@@ -71,16 +80,18 @@ python Crossroads/convert_convert.py "project feasibility" "Crossroads_Feasibili
 
 The `project feasibility` file (Markdown) contains the full feasibility study covering:
 
-- Needs analysis and community survey results
-- Technical, economic, social, environmental, and operational feasibility assessments
-- 2026-adjusted cost matrix and break-even analysis
-- Conclusion and funding recommendations
+- Needs analysis with community survey results (54 respondents)
+- Competitive landscape and demand quantification
+- Technical, economic, social, environmental, political, operational, and schedule viability
+- 2026-adjusted cost matrix, break-even analysis, and scenario modelling
+- Risk assessment matrix with severity ratings
+- Conclusion with eight-dimension viability summary and funding recommendations
 
 ---
 
 ## Project Background
 
-**Crossroads Community STEM Centre** is a proposed nonprofit facility in Langford, BC offering open drop-in access to professional-grade equipment — 3D printers, CNC machines, laser cutters, electronics labs — for career changers, students, and community members outside of formal post-secondary enrollment.
+**Crossroads Community STEM Centre** is a proposed nonprofit facility in Langford, BC offering open drop-in access to professional-grade equipment - 3D printers, CNC machines, laser cutters, electronics labs - for career changers, students, and community members outside of formal post-secondary enrollment.
 
 Key figures (Lean Model, 2026 estimates):
 

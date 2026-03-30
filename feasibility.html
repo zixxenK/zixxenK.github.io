@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossroads Community STEM Centre - Feasibility Study</title>
+    <meta name="description" content="Feasibility study assessing the viability of the Crossroads Community STEM Centre in Langford, British Columbia. March 2026.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ============================================ -->
+<!-- TOP NAV                                      -->
+<!-- ============================================ -->
+<nav class="topnav" aria-label="Site navigation">
+    <ul class="topnav__list">
+        <li><a href="index.html" class="topnav__link">Dashboard</a></li>
+        <li><a href="proposal.html" class="topnav__link">Proposal</a></li>
+        <li><a href="feasibility.html" class="topnav__link topnav__link--active" aria-current="page">Feasibility Study</a></li>
+    </ul>
+</nav>
+
+<!-- ============================================ -->
+<!-- SIDEBAR NAVIGATION                           -->
+<!-- ============================================ -->
+<button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-nav" aria-label="Toggle navigation menu">
+    <span class="sidebar-toggle__bar"></span>
+    <span class="sidebar-toggle__bar"></span>
+    <span class="sidebar-toggle__bar"></span>
+</button>
+
+<nav class="sidebar" id="sidebar-nav" aria-label="Feasibility study sections">
+    <div class="sidebar__header">
+        <span class="sidebar__logo" aria-hidden="true">&#9670;</span>
+        <span class="sidebar__title">Crossroads</span>
+    </div>
+    <ul class="sidebar__list">
+        <li><span class="sidebar__group-label">Overview</span></li>
+        <li><a href="#introduction" class="sidebar__link sidebar__link--active">Introduction</a></li>
+        <li><a href="#needs-analysis" class="sidebar__link">Needs Analysis</a></li>
+        <li><a href="#system-identification" class="sidebar__link">System Identification</a></li>
+        <li><a href="#problem-formulation" class="sidebar__link">Problem Formulation</a></li>
+        <li><a href="#alternatives" class="sidebar__link">System Alternatives</a></li>
+
+        <li><span class="sidebar__group-label">Viability</span></li>
+        <li><a href="#technical" class="sidebar__link">Technical</a></li>
+        <li><a href="#cost-analysis" class="sidebar__link">Cost Analysis</a></li>
+        <li><a href="#economic" class="sidebar__link">Economic</a></li>
+        <li><a href="#social" class="sidebar__link">Social</a></li>
+        <li><a href="#environmental" class="sidebar__link">Environmental</a></li>
+        <li><a href="#political" class="sidebar__link">Political &amp; Legal</a></li>
+        <li><a href="#operational" class="sidebar__link">Operational</a></li>
+        <li><a href="#schedule" class="sidebar__link">Schedule</a></li>
+
+        <li><span class="sidebar__group-label">Summary</span></li>
+        <li><a href="#risk-assessment" class="sidebar__link">Risk Assessment</a></li>
+        <li><a href="#conclusion" class="sidebar__link">Conclusion</a></li>
+        <li><a href="#references" class="sidebar__link">References</a></li>
+    </ul>
+    <div class="sidebar__footer">
+        <a href="index.html" class="btn btn--small btn--outline">&larr; Dashboard</a>
+        <a href="proposal.html" class="sidebar__footer-link btn btn--small btn--outline">Original Proposal &rarr;</a>
+    </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- MAIN CONTENT                                 -->
+<!-- ============================================ -->
+<main class="feasibility" id="main-content">
+
+    <!-- Breadcrumb -->
+    <p class="breadcrumb" aria-label="Breadcrumb">
+        Crossroads<span class="breadcrumb__separator" aria-hidden="true">&#8250;</span>Feasibility Study<span class="breadcrumb__separator" aria-hidden="true">&#8250;</span><span id="breadcrumb-section">Introduction</span>
+    </p>
+
+    <!-- Header -->
+    <header class="feasibility__header">
+        <h1 class="feasibility__title">Feasibility Study: Crossroads Community STEM Centre</h1>
+        <p class="feasibility__meta">An Assessment of the Viability of Establishing a Community STEM Learning Hub in Langford, British Columbia</p>
+        <p class="feasibility__meta">Prepared for: Jasmine North, Department of English, Camosun College</p>
+        <p class="feasibility__meta">Prepared by: Cameron Kibble, Founder, Crossroads Community Hub</p>
+        <p class="feasibility__meta">Date: March 26, 2026 (Updated: March 29, 2026)</p>
+    </header>
+
+    <!-- ======================================== -->
+    <!-- KEY METRICS                              -->
+    <!-- ======================================== -->
+    <div class="kpi-grid kpi-grid--feasibility">
+        <div class="kpi-card kpi-card--accent">
+            <span class="kpi-card__label">Year 1 Capital (Lean)</span>
+            <span class="kpi-card__value">$476,100</span>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-card__label">Annual Operating</span>
+            <span class="kpi-card__value">$310,000</span>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-card__label">Break-Even Target</span>
+            <span class="kpi-card__value">Month 8</span>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-card__label">Survey Interest</span>
+            <span class="kpi-card__value">65%</span>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-card__label">Member Target</span>
+            <span class="kpi-card__value">200</span>
+        </div>
+        <div class="kpi-card">
+            <span class="kpi-card__label">Weekly Access Hours</span>
+            <span class="kpi-card__value">73 hrs</span>
+        </div>
+    </div>
+
+    <!-- ======================================== -->
+    <!-- 1. INTRODUCTION                          -->
+    <!-- ======================================== -->
+    <section id="introduction" class="section">
+        <h2 class="section__heading">1. Introduction</h2>
+        <p>This feasibility study assesses the viability of establishing the Crossroads Community STEM Centre, a proposed open-access technical learning facility in Langford, British Columbia. The study evaluates the project across eight dimensions - technical, cost, economic, social, environmental, cultural, political/legal, operational, and schedule - to determine whether the project should proceed to the funding acquisition and construction phases.</p>
+
+        <h3>1.1 Study Scope and Methodology</h3>
+        <p>The assessment applies a structured systems engineering feasibility framework: problem formulation, generation of alternatives, and determination of viability across all applicable dimensions. Each viability dimension concludes with an explicit feasibility determination.</p>
+
+        <h3>1.2 Data Sources</h3>
+        <p>All data presented herein is drawn from three primary sources. No data has been fabricated or assumed without documentation.</p>
+        <ol>
+            <li><strong>Crossroads Community STEM Centre Project Proposal</strong> (March 11, 2026) - the original operational and financial plan containing startup budgets, revenue projections, equipment specifications, staffing models, and risk assessments.</li>
+            <li><strong>Independent 2026 Local Market Cost Analysis</strong> (March 26, 2026) - an updated analysis recalibrating the proposal&rsquo;s startup estimates against current Langford commercial lease rates, provincial wage benchmarks, and inflationary pressures. Where financial figures conflict between the proposal and this analysis, the updated March 26 figures are treated as canonical.</li>
+            <li><strong>Community Needs Assessment Survey</strong> (February 2026) - a survey of 54 respondents in the Langford and Greater Victoria area measuring demand for accessible STEM programming, preferred disciplines, price sensitivity, and scheduling preferences.</li>
+        </ol>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 2. NEEDS ANALYSIS                        -->
+    <!-- ======================================== -->
+    <section id="needs-analysis" class="section">
+        <h2 class="section__heading">2. Needs Analysis</h2>
+        <p>Langford is Vancouver Island&rsquo;s fastest-growing municipality, with a 2026 projected population of 63,120 and a 3.95 percent year-over-year growth rate. Despite this expansion, the West Shore region lacks a centralized, open-access facility where residents can develop practical technical skills outside of formal post-secondary enrollment. Access to advanced tools and lab environments in the Greater Victoria area is concentrated within institutions that impose tuition, enrollment, and scheduling barriers.</p>
+        <p>A review of existing alternatives in the region confirms this gap. The University of Victoria and Camosun College maintain well-equipped STEM labs, but access is restricted to enrolled students during designated institutional hours. The Victoria Makerspace operates on an application-based membership model with limited public drop-in hours and a club-oriented atmosphere focused on a narrow range of hobbyist disciplines.</p>
+        <p>A community needs assessment survey of 54 respondents in the Langford and Greater Victoria area yielded the following results:</p>
+        <ul>
+            <li>78% identified &ldquo;lack of affordable access to tools and lab space&rdquo; as their primary barrier to developing technical skills.</li>
+            <li>65% indicated they would &ldquo;definitely&rdquo; or &ldquo;probably&rdquo; use a drop-in community STEM facility in Langford.</li>
+            <li>61% preferred a monthly membership fee in the $25 to $50 range, though market realities may necessitate adjustments.</li>
+        </ul>
+
+        <!-- Survey Chart -->
+        <div id="feasibility-survey-chart" class="chart-container" aria-label="Community survey results chart"></div>
+
+        <p>The British Columbia Ministry of Education&rsquo;s Applied Design, Skills, and Technologies (ADST) curriculum emphasizes experiential learning and iterative design across K-12 education. Crossroads directly extends the ADST model into the community setting, bridging the gap between secondary education and professional practice.</p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 3. SYSTEM IDENTIFICATION                 -->
+    <!-- ======================================== -->
+    <section id="system-identification" class="section">
+        <h2 class="section__heading">3. System Identification</h2>
+        <p>The proposed system is a nonprofit community STEM learning facility located in Langford, BC, operating across four core disciplines: Robotics and Electronics, Digital Fabrication, Software Development, and Creative and Applied Design.</p>
+
+        <h3>Exogenous Variables</h3>
+        <ul>
+            <li>Municipal population growth rate and demographic shifts in the West Shore.</li>
+            <li>Langford commercial real estate market lease rates (Net + NNN).</li>
+            <li>Provincial and federal grant funding climate for educational nonprofits.</li>
+            <li>WorkSafeBC regulatory requirements and premium rates for workshop environments.</li>
+            <li>BC Societies Act requirements for nonprofit incorporation.</li>
+            <li>Inflationary pressures on specialized equipment and regional wage benchmarks.</li>
+        </ul>
+
+        <h3>Overt Variables</h3>
+        <ul>
+            <li>Staffing model and compensation structure.</li>
+            <li>Equipment selection, lifecycle management, and procurement strategy.</li>
+            <li>Programming schedule spanning 73 total access hours.</li>
+            <li>Fee structure encompassing sliding-scale memberships, drop-in passes, and workshop fees.</li>
+            <li>Revenue diversification strategy capping single-source dependencies at 30%.</li>
+        </ul>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 4. PROBLEM FORMULATION                   -->
+    <!-- ======================================== -->
+    <section id="problem-formulation" class="section">
+        <h2 class="section__heading">4. Problem Formulation</h2>
+        <p>Langford, BC, despite its rapid demographic and economic expansion, lacks an open-access community facility for residents to develop practical STEM skills using professional-grade equipment without post-secondary enrollment. Existing alternatives either restrict access to enrolled students or impose application-based membership barriers unsuited to beginners. Consequently, career changers, youth exploring STEM interests, and local professionals lack affordable, structured access to hands-on technical education.</p>
+
+        <h3>4.1 Competitive Landscape</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Facility</th>
+                        <th class="table__cell table__cell--header">Access Model</th>
+                        <th class="table__cell table__cell--header">Cost</th>
+                        <th class="table__cell table__cell--header">Hours</th>
+                        <th class="table__cell table__cell--header">Equipment Scope</th>
+                        <th class="table__cell table__cell--header">Target Audience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">UVic (~22,000 students)</td><td class="table__cell">Enrolled students only</td><td class="table__cell">Tuition-based</td><td class="table__cell">Institutional hours</td><td class="table__cell">Full STEM labs</td><td class="table__cell">Enrolled students</td></tr>
+                    <tr><td class="table__cell">Camosun (~19,000 learners)</td><td class="table__cell">Enrolled students only</td><td class="table__cell">Tuition-based</td><td class="table__cell">Institutional hours</td><td class="table__cell">Full STEM labs, CTAC</td><td class="table__cell">Enrolled students</td></tr>
+                    <tr><td class="table__cell">Victoria Makerspace</td><td class="table__cell">Application-based</td><td class="table__cell">Membership fee</td><td class="table__cell">Limited public hours</td><td class="table__cell">Narrow hobbyist range</td><td class="table__cell">Hobbyists, makers</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Crossroads (Proposed)</strong></td><td class="table__cell"><strong>Open-access, drop-in</strong></td><td class="table__cell"><strong>$60/mo or $15 drop-in</strong></td><td class="table__cell"><strong>73 hrs/week</strong></td><td class="table__cell"><strong>4-discipline professional labs</strong></td><td class="table__cell"><strong>All community members</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>4.2 Demand Quantification</h3>
+        <p>The February 2026 community needs assessment survey (n=54) quantifies demand across four discipline areas:</p>
+        <ul>
+            <li><strong>3D Printing / Digital Fabrication:</strong> 72% interest</li>
+            <li><strong>Software Development:</strong> 58% interest</li>
+            <li><strong>Robotics / Electronics:</strong> 54% interest</li>
+            <li><strong>Creative and Applied Design:</strong> 41% interest</li>
+        </ul>
+        <p>Additionally, 68% of respondents preferred weekday evening access and 59% preferred weekend availability, both of which are accommodated by the proposed 73-hour weekly schedule.</p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 5. GENERATION OF SYSTEM ALTERNATIVES     -->
+    <!-- ======================================== -->
+    <section id="alternatives" class="section">
+        <h2 class="section__heading">5. Generation of System Alternatives</h2>
+        <p>Three system alternatives have been developed to address the problem formulation, representing different risk and investment profiles.</p>
+
+        <div class="assessment-grid">
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Alternative A - Lean Model</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong" aria-label="Recommended">Recommended</span>
+                <p class="assessment-card__text">4,000 sqft facility focusing on core equipment clusters in 3D printing, electronics, and computing. Prioritizes manageable capital risk and operational agility.</p>
+                <details class="assessment-card__details">
+                    <summary class="assessment-card__details-toggle">Specifications</summary>
+                    <ul class="assessment-card__detail-list">
+                        <li><strong>Startup Capital:</strong> $476,100</li>
+                        <li><strong>Annual Operating:</strong> $310,000</li>
+                        <li><strong>Staff:</strong> ED + 2 Lab Supervisors (FTE)</li>
+                        <li><strong>Access:</strong> 73 hrs/week (63 staffed + 10 self-access)</li>
+                        <li><strong>Risk Profile:</strong> Moderate</li>
+                        <li><strong>Scalability:</strong> Can scale to Alternative B as revenue stabilizes</li>
+                    </ul>
+                </details>
+            </div>
+            <div class="assessment-card assessment-card--neutral">
+                <h3 class="assessment-card__title">Alternative B - Expanded Model</h3>
+                <span class="assessment-card__badge assessment-card__badge--moderate" aria-label="Higher Risk">Higher Risk</span>
+                <p class="assessment-card__text">6,000 sqft facility with full equipment complement including larger CNC router, expanded fabrication lab, and enterprise-grade digital infrastructure.</p>
+                <details class="assessment-card__details">
+                    <summary class="assessment-card__details-toggle">Specifications</summary>
+                    <ul class="assessment-card__detail-list">
+                        <li><strong>Startup Capital:</strong> $738,300</li>
+                        <li><strong>Annual Operating:</strong> $450,000</li>
+                        <li><strong>Staff:</strong> ED + 3+ Lab Supervisors (FTE)</li>
+                        <li><strong>Access:</strong> 73+ hrs/week</li>
+                        <li><strong>Risk Profile:</strong> High (capital exposure)</li>
+                        <li><strong>Scalability:</strong> Full-scale from launch</li>
+                    </ul>
+                </details>
+            </div>
+            <div class="assessment-card assessment-card--caution">
+                <h3 class="assessment-card__title">Alternative C - Pop-Up Fallback</h3>
+                <span class="assessment-card__badge assessment-card__badge--caution" aria-label="Fallback Only">Fallback Only</span>
+                <p class="assessment-card__text">Mobile workshop model renting community center space. Risk-mitigation fallback only - cannot deliver continuous equipment access fundamental to the core mission.</p>
+                <details class="assessment-card__details">
+                    <summary class="assessment-card__details-toggle">Specifications</summary>
+                    <ul class="assessment-card__detail-list">
+                        <li><strong>Startup Capital:</strong> &lt;$50,000</li>
+                        <li><strong>Annual Operating:</strong> Variable per event</li>
+                        <li><strong>Staff:</strong> Contract instructors only</li>
+                        <li><strong>Access:</strong> Schedule-bound only</li>
+                        <li><strong>Risk Profile:</strong> Low (no lease commitment)</li>
+                        <li><strong>Scalability:</strong> Cannot scale to permanent facility</li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+
+        <p><strong>Recommendation:</strong> Alternative A is recommended for initial launch. It carries a lower financial risk profile and can sustainably scale to Alternative B as earned revenue stabilizes.</p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 6. DETERMINATION OF VIABILITY            -->
+    <!-- ======================================== -->
+
+    <section class="section">
+        <h2 class="section__heading">6. Determination of Viability</h2>
+        <p class="section__intro">Eight dimensions of feasibility have been evaluated. Each dimension below includes expandable detail cards with supporting data drawn from the project proposal, the 2026 market analysis, and the community needs survey.</p>
+    </section>
+
+    <!-- 6.1 Technical -->
+    <section id="technical" class="section">
+        <h2 class="section__heading">6.1 Technical Feasibility</h2>
+        <p>The required equipment is commercially available and well-documented. The facility requires 200-amp electrical service, industrial ventilation for fabrication areas, and compliance with the Accessible Canada Act. These requirements are standard for light industrial spaces available in Langford&rsquo;s McCallum Road and West Shore Parkway zones.</p>
+
+        <div class="assessment-grid">
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Equipment Inventory (Lean)</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong" aria-label="Confirmed">Confirmed</span>
+                <p class="assessment-card__text">All equipment is commercially available with established supply chains. Surplus from Camosun CTAC projected to offset $15,000-$30,000.</p>
+                <details class="assessment-card__details">
+                    <summary class="assessment-card__details-toggle">Full Inventory</summary>
+                    <ul class="assessment-card__detail-list">
+                        <li><strong>Robotics/Electronics:</strong> 20x Arduino Uno R4, 10x Raspberry Pi 5, 6x soldering stations, 4x oscilloscopes</li>
+                        <li><strong>Digital Fabrication:</strong> 2-4x FDM 3D printers, 1x 40W CO2 laser cutter, 1x benchtop CNC router</li>
+                        <li><strong>Software/Creative:</strong> 10-15x workstations, 6x drawing tablets, design software licenses</li>
+                        <li><strong>Infrastructure:</strong> Component inventory, test benches, networking equipment</li>
+                    </ul>
+                </details>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Facility Requirements</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong" aria-label="Standard">Standard</span>
+                <p class="assessment-card__text">Requirements are standard for light industrial spaces available in Langford commercial zones at $16-$22/sqft net + NNN.</p>
+                <details class="assessment-card__details">
+                    <summary class="assessment-card__details-toggle">Requirements Detail</summary>
+                    <ul class="assessment-card__detail-list">
+                        <li><strong>Electrical:</strong> 200-amp service with dedicated circuits</li>
+                        <li><strong>Ventilation:</strong> Industrial ventilation, soldering fume extraction, CNC dust collection</li>
+                        <li><strong>ESD Protection:</strong> ESD-safe electronics workstations</li>
+                        <li><strong>Accessibility:</strong> Accessible Canada Act compliance</li>
+                        <li><strong>Data Protection:</strong> UPS battery backup for workstations</li>
+                    </ul>
+                </details>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Safety Protocols</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong" aria-label="WorkSafeBC Compliant">Compliant</span>
+                <p class="assessment-card__text">Mandatory 30-minute safety orientation for all participants. Hazard classes defined per discipline with dual-supervisor coverage for high-risk equipment.</p>
+                <details class="assessment-card__details">
+                    <summary class="assessment-card__details-toggle">Hazard Classes</summary>
+                    <ul class="assessment-card__detail-list">
+                        <li><strong>Robotics/Electronics:</strong> Soldering ventilation, ESD-safe stations, battery fire-safe storage, eye protection</li>
+                        <li><strong>Digital Fabrication:</strong> CNC machine guarding, dust collection, laser safety enclosure, face shields</li>
+                        <li><strong>Software Dev:</strong> Standard ergonomics; no high-risk equipment; UPS backup</li>
+                        <li><strong>Creative/Applied Design:</strong> Adhesive/spray ventilation, blade safety, proper lighting</li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+        <p><strong>Technical feasibility is confirmed.</strong></p>
+    </section>
+
+    <!-- 6.2 Cost Analysis -->
+    <section id="cost-analysis" class="section">
+        <h2 class="section__heading">6.2 Updated Cost Analysis - 2026 Adjustment</h2>
+        <p>An independent analysis of Langford, British Columbia&rsquo;s 2026 economic conditions necessitates an adjustment of the original March 2026 startup estimates. Inflationary pressures in the West Shore commercial real estate market and provincial wage adjustments require a recalibration of initial assumptions.</p>
+
+        <h3>Cost Adjustments and Identifications</h3>
+        <p><strong>Underestimated Costs:</strong> Initial personnel costs ($110,000 for 2 FTEs + Admin) were sub-market for 2026. Retaining qualified, safety-certified technical instructors in BC requires competitive compensation (estimated $65,000/year per Lead Instructor) plus a 15-20% load for mandatory benefits (WorkSafeBC premiums, CPP, EI). Furthermore, commercial lease estimates must be adjusted to $28-$30/sqft gross to accurately reflect recent municipal property tax impacts on Triple Net (NNN) leases.</p>
+        <p><strong>Overestimated Costs:</strong> The initial $10,000-$20,000 marketing budget can be reduced. Organic community demand and strategic partnerships with local school districts will yield high initial conversion rates with a leaner digital marketing spend.</p>
+        <p><strong>Missing Cost Categories:</strong> The original budget omitted an equipment depreciation/sinking fund and explicit accounting for commercial general liability (CGL) insurance riders specific to public-access high-risk machinery.</p>
+
+        <!-- Cost Adjustment Chart -->
+        <div id="feasibility-cost-chart" class="chart-container" aria-label="Cost adjustment waterfall chart"></div>
+
+        <h3>Table 1: 2026 Market Cost Adjustment Matrix (Startup &amp; Year 1)</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Category</th>
+                        <th class="table__cell table__cell--header">Initial Estimate (Lean)</th>
+                        <th class="table__cell table__cell--header">2026 Adjusted Reality (Lean)</th>
+                        <th class="table__cell table__cell--header">Variance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Facility Operations (Lease + Utilities)</td><td class="table__cell">$96,000</td><td class="table__cell">$120,000</td><td class="table__cell">+25.0%</td></tr>
+                    <tr><td class="table__cell">Personnel (Wages + Mandatory Benefits)</td><td class="table__cell">$110,000</td><td class="table__cell">$165,000</td><td class="table__cell">+50.0%</td></tr>
+                    <tr><td class="table__cell">Equipment, Tooling, &amp; Shipping</td><td class="table__cell">$60,000</td><td class="table__cell">$68,000</td><td class="table__cell">+13.3%</td></tr>
+                    <tr><td class="table__cell">Legal, Permits, &amp; High-Risk Insurance</td><td class="table__cell">$20,000</td><td class="table__cell">$28,000</td><td class="table__cell">+40.0%</td></tr>
+                    <tr><td class="table__cell">Marketing &amp; Outreach</td><td class="table__cell">$10,000</td><td class="table__cell">$6,000</td><td class="table__cell">-40.0%</td></tr>
+                    <tr><td class="table__cell">Development Labor</td><td class="table__cell">$17,000</td><td class="table__cell">$17,000</td><td class="table__cell">0.0%</td></tr>
+                    <tr><td class="table__cell">Equipment Sinking Fund (New)</td><td class="table__cell">$0</td><td class="table__cell">$10,000</td><td class="table__cell">N/A</td></tr>
+                    <tr><td class="table__cell">Contingency (15% of Subtotal)</td><td class="table__cell">$46,950</td><td class="table__cell">$62,100</td><td class="table__cell">+32.2%</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Total Year 1 Capital Required</strong></td><td class="table__cell"><strong>$359,950</strong></td><td class="table__cell"><strong>$476,100</strong></td><td class="table__cell"><strong>+32.2%</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 6.3 Economic -->
+    <section id="economic" class="section">
+        <h2 class="section__heading">6.3 Revised Economic Feasibility</h2>
+        <p>The revised 2026 cost analysis confirms that the project remains economically viable, but the break-even threshold and revenue targets must be adjusted upward.</p>
+
+        <h3>Table 2: Revised Annual Operating Costs (Ongoing)</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Cost Item</th>
+                        <th class="table__cell table__cell--header">Lean Model (4,000 sqft)</th>
+                        <th class="table__cell table__cell--header">Expanded Model (6,000 sqft)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Facility Lease (Gross) &amp; Utilities</td><td class="table__cell">$120,000</td><td class="table__cell">$180,000</td></tr>
+                    <tr><td class="table__cell">Personnel (including Benefits)</td><td class="table__cell">$165,000</td><td class="table__cell">$230,000</td></tr>
+                    <tr><td class="table__cell">Maintenance &amp; Sinking Fund</td><td class="table__cell">$10,000</td><td class="table__cell">$18,000</td></tr>
+                    <tr><td class="table__cell">Insurance, Operations &amp; Legal</td><td class="table__cell">$15,000</td><td class="table__cell">$22,000</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Total Annual Operating</strong></td><td class="table__cell"><strong>$310,000</strong></td><td class="table__cell"><strong>$450,000</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>6.3.1 Break-Even Discussion &amp; Revenue Assumptions</h3>
+        <p>Under the adjusted Lean Model, monthly operating expenses average approximately $25,833. To achieve a sustainable surplus for the contingency reserve, monthly revenue must target $29,000.</p>
+        <p>To meet this, the original membership pricing assumption must shift. The target becomes 200 active members at $60/month ($12,000), supported by $17,000 monthly distributed across workshop fees, corporate training contracts, institutional partnerships, and sustained grant funding. The commitment to capping any single funding source at 30% of total revenue remains intact, ensuring the center is shielded from abrupt grant cancellations.</p>
+        <p class="feasibility__note"><em>Note: The original project proposal (March 11, 2026) projected $34,000 monthly revenue at $50/month with 160 members. The figures above reflect the March 26 updated cost analysis, which adjusted membership pricing to $60/month and the member target to 200 to account for 2026 market conditions.</em></p>
+
+        <h3>6.3.2 Revenue Diversification Model</h3>
+
+        <!-- Revenue Breakdown Chart -->
+        <div id="feasibility-revenue-chart" class="chart-container" aria-label="Revenue breakdown chart"></div>
+
+        <h4>Table 3: Monthly Revenue Streams (Pre-Adjustment Targets from Proposal)</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Revenue Source</th>
+                        <th class="table__cell table__cell--header">Unit Price</th>
+                        <th class="table__cell table__cell--header">Monthly Target</th>
+                        <th class="table__cell table__cell--header">Monthly Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Individual Memberships</td><td class="table__cell">$50/month</td><td class="table__cell">160 members</td><td class="table__cell">$8,000</td></tr>
+                    <tr><td class="table__cell">Drop-in Day Passes</td><td class="table__cell">$15/visit</td><td class="table__cell">200 visits</td><td class="table__cell">$3,000</td></tr>
+                    <tr><td class="table__cell">Workshop Fees (avg.)</td><td class="table__cell">$40/attendee</td><td class="table__cell">200 attendees</td><td class="table__cell">$8,000</td></tr>
+                    <tr><td class="table__cell">Corporate Training</td><td class="table__cell">$500/session</td><td class="table__cell">6 sessions</td><td class="table__cell">$3,000</td></tr>
+                    <tr><td class="table__cell">Equipment Surcharges</td><td class="table__cell">$15/booking</td><td class="table__cell">175 bookings</td><td class="table__cell">$2,625</td></tr>
+                    <tr><td class="table__cell">Event and Room Rental</td><td class="table__cell">$250/event</td><td class="table__cell">5 events</td><td class="table__cell">$1,250</td></tr>
+                    <tr><td class="table__cell">Grants and Sponsorships</td><td class="table__cell">-</td><td class="table__cell">-</td><td class="table__cell">$8,125</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Total Monthly Revenue</strong></td><td class="table__cell"></td><td class="table__cell"></td><td class="table__cell"><strong>$34,000</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Under the updated $60/month membership model with 200 members, the membership line increases to $12,000/month. The remaining streams are expected to generate $17,000/month to reach the $29,000 target. Grant and sponsorship funding ($97,500/year) represents approximately 28% of the $348,000 annual revenue target, remaining within the 30% single-source cap.</p>
+
+        <h3>6.3.3 Sustainability Trajectory</h3>
+        <p>Earned revenue (memberships, workshops, drop-ins, corporate training, surcharges, rentals) is projected to reach 55% of total income by Year 3, reducing grant dependency and strengthening long-term financial sustainability.</p>
+
+        <h3>6.3.4 Cost Sensitivity Analysis</h3>
+
+        <!-- Scenario Comparison Chart -->
+        <div id="feasibility-scenario-chart" class="chart-container" aria-label="Cost scenario comparison chart"></div>
+
+        <div class="assessment-grid">
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Best-Case Scenario</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Best</span>
+                <p class="assessment-card__text">Equipment donations from Camosun CTAC offset up to $25,000 in capital expenditures; membership caps at 250 users, generating a comfortable monthly surplus.</p>
+            </div>
+            <div class="assessment-card assessment-card--neutral">
+                <h3 class="assessment-card__title">Expected Scenario</h3>
+                <span class="assessment-card__badge assessment-card__badge--moderate">Expected</span>
+                <p class="assessment-card__text">Break-even achieved in Month 8. Operating costs align with $310,000 annual projection, requiring sustained baseline grant support alongside earned revenue.</p>
+            </div>
+            <div class="assessment-card assessment-card--caution">
+                <h3 class="assessment-card__title">Worst-Case Scenario</h3>
+                <span class="assessment-card__badge assessment-card__badge--caution">Worst</span>
+                <p class="assessment-card__text">Lease rates spike above $32/sqft or membership stalls below 120 users. Pivot to Pop-Up Fallback Model to restrict overhead exposure.</p>
+            </div>
+        </div>
+
+        <h3>6.3.5 Evaluation KPIs</h3>
+        <ul>
+            <li><strong>Engagement Analytics:</strong> Year 1 target: 150 unique participants per quarter. Year 3: 500 participants per quarter with a 60% return rate.</li>
+            <li><strong>Employment Pipelines:</strong> Growth of student internship placements and member career transitions into technical roles.</li>
+            <li><strong>Social Impact Data:</strong> Member surveys tracking self-reported improvements in well-being, skill confidence, and community connectivity.</li>
+            <li><strong>Institutional Partnerships:</strong> Minimum of 4 annual partnerships with local schools and businesses to sustain programming.</li>
+        </ul>
+
+        <p><strong>Economic feasibility is confirmed.</strong></p>
+    </section>
+
+    <!-- 6.4 Social -->
+    <section id="social" class="section">
+        <h2 class="section__heading">6.4 Social Feasibility</h2>
+        <p>Crossroads operates on a sliding-scale fee structure to ensure equitable access, mitigating the impact of the increased $60 base membership fee. Targeted outreach for low-income and Indigenous youth through partnerships with School Districts 61, 62, and 63 remains a priority.</p>
+
+        <h3>6.4.1 Clientele Personas</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Persona</th>
+                        <th class="table__cell table__cell--header">Demographics</th>
+                        <th class="table__cell table__cell--header">Primary Needs</th>
+                        <th class="table__cell table__cell--header">Est. Share</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Curious Beginners</td><td class="table__cell">All ages, no prior technical experience</td><td class="table__cell">Low-pressure environment to explore STEM interests</td><td class="table__cell"><strong>35%</strong></td></tr>
+                    <tr><td class="table__cell">Experienced Makers</td><td class="table__cell">Hobbyists and professionals</td><td class="table__cell">Industrial-grade tools not available in home workshops; collaborative community</td><td class="table__cell"><strong>25%</strong></td></tr>
+                    <tr><td class="table__cell">Students and Educators</td><td class="table__cell">Post-secondary students; K-12 teachers</td><td class="table__cell">Supplementary lab time beyond institutional hours; ADST resources</td><td class="table__cell"><strong>25%</strong></td></tr>
+                    <tr><td class="table__cell">Community Builders</td><td class="table__cell">Retirees, volunteers</td><td class="table__cell">Social connection through mentorship, event organization, peer support</td><td class="table__cell"><strong>15%</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>6.4.2 Price Sensitivity</h3>
+        <p>The community survey found that 61% of respondents preferred a monthly membership fee in the $25-$50 range. The updated $60/month base fee exceeds this preference band, making the sliding-scale structure essential for maintaining equitable access. The $15 drop-in option provides a lower-commitment entry point for price-sensitive users.</p>
+
+        <h3>6.4.3 Community Ecosystem</h3>
+        <p>The volunteer mentorship cohort, projected at 15 to 25 active members contributing approximately 200 hours monthly, fosters a peer-support ecosystem. This model anchors the facility as a vital &ldquo;third place&rdquo; for community development, blending structured learning with social connectivity.</p>
+
+        <p><strong>Social feasibility remains highly robust.</strong></p>
+    </section>
+
+    <!-- 6.5 Environmental -->
+    <section id="environmental" class="section">
+        <h2 class="section__heading">6.5 Environmental and Cultural Feasibility</h2>
+
+        <h3>6.5.1 Environmental Considerations</h3>
+        <p>Light fabrication waste is managed via standard commercial protocols. Discipline-specific waste management includes:</p>
+        <ul>
+            <li><strong>Digital Fabrication:</strong> Dust collection on CNC router; 3D printer waste (PLA, PETG) recyclable through commercial programs; laser cutter enclosed with fume extraction.</li>
+            <li><strong>Robotics/Electronics:</strong> Soldering fume extraction; battery fire-safe storage; e-waste managed through BC-certified recycling.</li>
+            <li><strong>Creative/Applied Design:</strong> Ventilation for adhesives and sprays; physical modelling scrap via standard commercial waste.</li>
+        </ul>
+        <p>Iterative prototyping inherently minimizes raw material waste, as designs are refined digitally before physical fabrication.</p>
+
+        <h3>6.5.2 Cultural Alignment</h3>
+        <p>The British Columbia Ministry of Education&rsquo;s ADST curriculum emphasizes experiential learning and iterative design across K-12 education. Crossroads directly extends the ADST model into the community setting. The facility addresses the infrastructure deficit caused by rapid municipal expansion in the West Shore, where population growth (3.95% year-over-year) has outpaced community learning infrastructure development.</p>
+
+        <p><strong>Environmental and cultural feasibility is confirmed.</strong></p>
+    </section>
+
+    <!-- 6.6 Political -->
+    <section id="political" class="section">
+        <h2 class="section__heading">6.6 Political and Legal Feasibility</h2>
+
+        <h3>6.6.1 Regulatory Roadmap</h3>
+        <ol>
+            <li><strong>BC Societies Act:</strong> Incorporation as a nonprofit society to maximize public trust and grant eligibility. Bylaws are a deliverable of the Detailed Design phase.</li>
+            <li><strong>WorkSafeBC Compliance:</strong> Safety orientation protocols, dual-supervisor coverage, premium payments for workshop environments.</li>
+            <li><strong>CGL Insurance:</strong> Specialized riders for open-access facility with CO2 lasers, CNC mills, and soldering stations. Lean budget: $28,000 (up from $20,000 in original proposal).</li>
+            <li><strong>Accessible Canada Act:</strong> Full facility compliance for accessibility.</li>
+        </ol>
+
+        <h3>6.6.2 Institutional Partnerships</h3>
+        <div class="assessment-grid">
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Camosun College CTAC</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Active</span>
+                <p class="assessment-card__text">Technology Access Centre in preliminary discussions for student placements and limited equipment transfers, projected to offset $15,000-$30,000 in startup costs.</p>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">VIATEC</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Active</span>
+                <p class="assessment-card__text">Victoria Innovation, Advanced Technology, and Entrepreneurship Council provides access to over 900 potential corporate sponsors and mentors.</p>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">School Districts 61, 62, 63</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Targeted</span>
+                <p class="assessment-card__text">Targeted outreach partnerships for youth programming, free trial workshops, and ADST curriculum alignment.</p>
+            </div>
+        </div>
+
+        <p><strong>Political and legal feasibility is confirmed.</strong></p>
+    </section>
+
+    <!-- 6.7 Operational -->
+    <section id="operational" class="section">
+        <h2 class="section__heading">6.7 Operational Feasibility</h2>
+
+        <h3>6.7.1 Staffing Model</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Role</th>
+                        <th class="table__cell table__cell--header">Type</th>
+                        <th class="table__cell table__cell--header">Responsibility</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Executive Director</td><td class="table__cell">1 FTE</td><td class="table__cell">Strategic development, partnership outreach, facility management</td></tr>
+                    <tr><td class="table__cell">Lab Supervisors</td><td class="table__cell">2 FTE ($65K + benefits each)</td><td class="table__cell">Equipment operations, staggered shifts, dual-supervisor peak coverage</td></tr>
+                    <tr><td class="table__cell">Board of Directors</td><td class="table__cell">5 Volunteer professionals</td><td class="table__cell">Governance and legal compliance oversight</td></tr>
+                    <tr><td class="table__cell">Volunteer Mentors</td><td class="table__cell">15-25 active (~200 hrs/mo)</td><td class="table__cell">Peer-to-peer technical support; train-the-trainer model</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>6.7.2 Weekly Operating Schedule</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Day</th>
+                        <th class="table__cell table__cell--header">Staffed Hours</th>
+                        <th class="table__cell table__cell--header">Self-Access</th>
+                        <th class="table__cell table__cell--header">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Monday - Friday</td><td class="table__cell">10:00 AM - 8:00 PM (50 hrs)</td><td class="table__cell">8:00 PM - 10:00 PM (10 hrs)</td><td class="table__cell">60 hrs</td></tr>
+                    <tr><td class="table__cell">Saturday</td><td class="table__cell">10:00 AM - 6:00 PM (8 hrs)</td><td class="table__cell">-</td><td class="table__cell">8 hrs</td></tr>
+                    <tr><td class="table__cell">Sunday</td><td class="table__cell">12:00 PM - 5:00 PM (5 hrs)</td><td class="table__cell">-</td><td class="table__cell">5 hrs</td></tr>
+                    <tr class="table__row--highlight"><td class="table__cell"><strong>Weekly Total</strong></td><td class="table__cell"><strong>63 hours</strong></td><td class="table__cell"><strong>10 hours</strong></td><td class="table__cell"><strong>73 hours</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Self-access hours (weekday evenings 8:00-10:00 PM) are restricted to member card access in low-risk zones only. High-risk equipment requires staffed supervision. This schedule directly addresses survey findings: 68% preferred weekday evening access, 59% preferred weekends.</p>
+
+        <p><strong>Operational feasibility is confirmed.</strong></p>
+    </section>
+
+    <!-- 6.8 Schedule -->
+    <section id="schedule" class="section">
+        <h2 class="section__heading">6.8 Schedule Feasibility</h2>
+        <p>A 12-month phased implementation timeline is maintained across five phases:</p>
+
+        <!-- Visual Timeline -->
+        <div class="feasibility-timeline" aria-label="Implementation timeline">
+            <div class="feasibility-timeline__item feasibility-timeline__item--phase1">
+                <div class="feasibility-timeline__marker">1</div>
+                <div class="feasibility-timeline__content">
+                    <h4 class="feasibility-timeline__title">Foundation</h4>
+                    <span class="feasibility-timeline__period">Months 1-3</span>
+                    <ul class="feasibility-timeline__list">
+                        <li>Nonprofit incorporation (BC Societies Act)</li>
+                        <li>Lease negotiation and facility selection</li>
+                        <li>Board of Directors recruitment</li>
+                        <li>Initial grant applications</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="feasibility-timeline__item feasibility-timeline__item--phase2">
+                <div class="feasibility-timeline__marker">2</div>
+                <div class="feasibility-timeline__content">
+                    <h4 class="feasibility-timeline__title">Build-Out</h4>
+                    <span class="feasibility-timeline__period">Months 4-6</span>
+                    <ul class="feasibility-timeline__list">
+                        <li>Facility renovation (electrical, ventilation, accessibility)</li>
+                        <li>Equipment procurement and commissioning</li>
+                        <li>WorkSafeBC compliance and safety protocols</li>
+                        <li>Staff hiring and training</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="feasibility-timeline__item feasibility-timeline__item--phase3">
+                <div class="feasibility-timeline__marker">3</div>
+                <div class="feasibility-timeline__content">
+                    <h4 class="feasibility-timeline__title">Soft Launch</h4>
+                    <span class="feasibility-timeline__period">Months 7-9</span>
+                    <ul class="feasibility-timeline__list">
+                        <li>Pilot workshops with limited enrollment</li>
+                        <li>Safety orientation protocol testing</li>
+                        <li>Community feedback collection</li>
+                        <li>SD 61/62/63 partnership formalization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="feasibility-timeline__item feasibility-timeline__item--phase4">
+                <div class="feasibility-timeline__marker">4</div>
+                <div class="feasibility-timeline__content">
+                    <h4 class="feasibility-timeline__title">Full Launch</h4>
+                    <span class="feasibility-timeline__period">Months 10-12</span>
+                    <ul class="feasibility-timeline__list">
+                        <li>Full public launch at 73 hrs/week</li>
+                        <li>All four disciplines operational</li>
+                        <li>Membership enrollment drive</li>
+                        <li>KPI evaluation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="feasibility-timeline__item feasibility-timeline__item--phase5">
+                <div class="feasibility-timeline__marker">5</div>
+                <div class="feasibility-timeline__content">
+                    <h4 class="feasibility-timeline__title">Optimization</h4>
+                    <span class="feasibility-timeline__period">Ongoing</span>
+                    <ul class="feasibility-timeline__list">
+                        <li>Revenue diversification monitoring</li>
+                        <li>Programming adjustments per engagement analytics</li>
+                        <li>Scale assessment for Alt B transition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3>6.8.1 Risk Triggers and Contingencies</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Risk</th>
+                        <th class="table__cell table__cell--header">Trigger</th>
+                        <th class="table__cell table__cell--header">Contingency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Facility Delay</td><td class="table__cell">Not secured within first 3 months</td><td class="table__cell">Adopt pop-up model with community center space</td></tr>
+                    <tr><td class="table__cell">Funding Shortfall</td><td class="table__cell">Grant funding lower than projected</td><td class="table__cell">Scale to lean budget; prioritize 3D printing (72%) and software (58%)</td></tr>
+                    <tr><td class="table__cell">Low Participation</td><td class="table__cell">Attendance targets not met by Month 10</td><td class="table__cell">Free trial workshops; direct SD 61/62/63 partnerships</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p><strong>Schedule feasibility is confirmed.</strong></p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 7. RISK ASSESSMENT SUMMARY               -->
+    <!-- ======================================== -->
+    <section id="risk-assessment" class="section">
+        <h2 class="section__heading">7. Risk Assessment Summary</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="table__cell table__cell--header">Category</th>
+                        <th class="table__cell table__cell--header">Risk</th>
+                        <th class="table__cell table__cell--header">Likelihood</th>
+                        <th class="table__cell table__cell--header">Impact</th>
+                        <th class="table__cell table__cell--header">Mitigation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table__cell">Financial</td><td class="table__cell">Lease rates exceed $32/sqft</td><td class="table__cell"><span class="risk-badge risk-badge--moderate">Moderate</span></td><td class="table__cell"><span class="risk-badge risk-badge--high">High</span></td><td class="table__cell">Pivot to Pop-Up; renegotiate or relocate</td></tr>
+                    <tr><td class="table__cell">Financial</td><td class="table__cell">Membership stalls below 120</td><td class="table__cell"><span class="risk-badge risk-badge--moderate">Moderate</span></td><td class="table__cell"><span class="risk-badge risk-badge--high">High</span></td><td class="table__cell">Free trials; SD partnerships; marketing reallocation</td></tr>
+                    <tr><td class="table__cell">Financial</td><td class="table__cell">Grant funding shortfall</td><td class="table__cell"><span class="risk-badge risk-badge--moderate">Moderate</span></td><td class="table__cell"><span class="risk-badge risk-badge--moderate">Moderate</span></td><td class="table__cell">30% cap; 55% earned revenue target by Year 3</td></tr>
+                    <tr><td class="table__cell">Operational</td><td class="table__cell">Facility not secured in 3 months</td><td class="table__cell"><span class="risk-badge risk-badge--low">Low</span></td><td class="table__cell"><span class="risk-badge risk-badge--high">High</span></td><td class="table__cell">Pop-up model with community center space</td></tr>
+                    <tr><td class="table__cell">Operational</td><td class="table__cell">Instructor recruitment difficulty</td><td class="table__cell"><span class="risk-badge risk-badge--low">Low</span></td><td class="table__cell"><span class="risk-badge risk-badge--moderate">Moderate</span></td><td class="table__cell">Competitive pay ($65K+); train-the-trainer volunteers</td></tr>
+                    <tr><td class="table__cell">Technical</td><td class="table__cell">Equipment failure/downtime</td><td class="table__cell"><span class="risk-badge risk-badge--low">Low</span></td><td class="table__cell"><span class="risk-badge risk-badge--moderate">Moderate</span></td><td class="table__cell">$10K sinking fund; institutional surplus pipeline</td></tr>
+                    <tr><td class="table__cell">Regulatory</td><td class="table__cell">WorkSafeBC compliance issues</td><td class="table__cell"><span class="risk-badge risk-badge--low">Low</span></td><td class="table__cell"><span class="risk-badge risk-badge--high">High</span></td><td class="table__cell">Mandatory orientation; dual-supervisor protocol</td></tr>
+                    <tr><td class="table__cell">Market</td><td class="table__cell">Price sensitivity ($60 vs $25-$50)</td><td class="table__cell"><span class="risk-badge risk-badge--moderate">Moderate</span></td><td class="table__cell"><span class="risk-badge risk-badge--moderate">Moderate</span></td><td class="table__cell">Sliding-scale fees; $15 drop-in option</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 8. CONCLUSION                            -->
+    <!-- ======================================== -->
+    <section id="conclusion" class="section">
+        <h2 class="section__heading">8. Conclusion and Recommendation</h2>
+        <p>This feasibility study confirms that the Crossroads Community STEM Centre remains viable in the 2026 economic landscape. While regional market pressures in Langford - specifically commercial real estate rates ($28-$30/sqft gross) and professional wage benchmarks ($65,000/year per Lead Instructor) - have increased the Year 1 Lean Model startup requirement to $476,100 (up 32.2% from the original $359,950 estimate), the underlying demand for accessible technical education is thoroughly validated.</p>
+
+        <h3>Key Findings Across All Eight Dimensions</h3>
+        <div class="assessment-grid">
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Technical</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Confirmed</span>
+                <p class="assessment-card__text">All equipment commercially available; facility requirements standard for Langford light industrial spaces.</p>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Cost</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Adjusted</span>
+                <p class="assessment-card__text">$476,100 startup accounts for all underestimated and missing cost categories from original proposal.</p>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Economic</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Viable</span>
+                <p class="assessment-card__text">Break-even at Month 8 with 200 members. Earned revenue projected at 55% of income by Year 3.</p>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Social</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Robust</span>
+                <p class="assessment-card__text">Four clientele personas; sliding-scale fees and $15 drop-in mitigate price sensitivity gap.</p>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Environmental</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Confirmed</span>
+                <p class="assessment-card__text">Discipline-specific waste management; iterative prototyping minimizes material waste.</p>
+            </div>
+            <div class="assessment-card assessment-card--positive">
+                <h3 class="assessment-card__title">Political/Legal</h3>
+                <span class="assessment-card__badge assessment-card__badge--strong">Strong</span>
+                <p class="assessment-card__text">Strong institutional partnerships (Camosun CTAC, VIATEC, SD 61/62/63); clear regulatory roadmap.</p>
+            </div>
+            <div class="assessment-card assessment-card--neutral">
+                <h3 class="assessment-card__title">Operational</h3>
+                <span class="assessment-card__badge assessment-card__badge--moderate">Confirmed</span>
+                <p class="assessment-card__text">Four-tier staffing model covers 73 weekly hours with dual-supervisor safety coverage.</p>
+            </div>
+            <div class="assessment-card assessment-card--neutral">
+                <h3 class="assessment-card__title">Schedule</h3>
+                <span class="assessment-card__badge assessment-card__badge--moderate">Confirmed</span>
+                <p class="assessment-card__text">12-month, five-phase timeline with documented risk triggers and contingencies.</p>
+            </div>
+        </div>
+
+        <p><strong>Recommendation:</strong> The project should immediately proceed to the funding acquisition phase utilizing the adjusted Lean Model (Alternative A). The revised operational budget of $310,000 annually is sustainable given the calculated break-even threshold of 200 members and diversified ancillary revenue streams. Execution should commence with the formalization of the nonprofit society and the initiation of targeted grant applications to secure the necessary startup capital.</p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- 9. REFERENCES                            -->
+    <!-- ======================================== -->
+    <section id="references" class="section">
+        <h2 class="section__heading">9. References</h2>
+        <ol class="references-list">
+            <li>Statistics Canada, &ldquo;Census profile, 2021 Census of Population: Langford, City [Census subdivision], British Columbia,&rdquo; Government of Canada, Ottawa, ON, 2023.</li>
+            <li>M. Rahman and M. Best, &ldquo;Sustainability of makerspaces: Developing a framework for sustainable community innovation centers,&rdquo; <em>ACM Journal on Computing and Sustainable Societies</em>, vol. 2, no. 3, art. 33, pp. 1-20, Sep. 2024.</li>
+            <li>WorkSafeBC, &ldquo;Education health and safety guidelines,&rdquo; Richmond, BC, 2024.</li>
+            <li>British Columbia Ministry of Education, &ldquo;Applied design, skills, and technologies curriculum,&rdquo; Victoria, BC, 2024.</li>
+            <li>D. A. Kolb, <em>Experiential Learning: Experience as the Source of Learning and Development</em>, 2nd ed. Upper Saddle River, NJ: Pearson Education, 2015.</li>
+            <li>A. Y. Kolb and D. A. Kolb, &ldquo;Learning styles and learning spaces: Enhancing experiential learning in higher education,&rdquo; <em>Academy of Management Learning and Education</em>, vol. 4, no. 2, pp. 193-212, Jun. 2005.</li>
+            <li>R. Oldenburg, <em>The Great Good Place: Cafes, Coffee Shops, Bookstores, Bars, Hair Salons, and Other Hangouts at the Heart of a Community</em>, 3rd ed. New York, NY: Da Capo Press, 1999.</li>
+            <li>D. Oblinger, Ed., <em>Learning Spaces</em>. Boulder, CO: EDUCAUSE, 2006.</li>
+            <li>British Columbia Ministry of Education, &ldquo;Student Learning Survey: Provincial results,&rdquo; Victoria, BC, 2023.</li>
+            <li>Council of Canadian Academies, &ldquo;Some Assembly Required: STEM Skills and Canada&rsquo;s Economic Productivity,&rdquo; Ottawa, ON, 2015.</li>
+            <li>Canada Not-for-profit Corporations Act, S.C. 2009, c. 23. Government of Canada, Ottawa, ON, 2009.</li>
+            <li>Innovation, Science and Economic Development Canada, &ldquo;SME Research and Statistics,&rdquo; Government of Canada, Ottawa, ON, 2023.</li>
+            <li>A. Cun, S. Abramovich, and J. M. Smith, &ldquo;An assessment matrix for library makerspaces,&rdquo; <em>Library &amp; Information Science Research</em>, vol. 41, no. 1, pp. 39-47, 2019.</li>
+        </ol>
+    </section>
+
+</main>
+
+<!-- ============================================ -->
+<!-- FOOTER                                       -->
+<!-- ============================================ -->
+<footer class="site-footer">
+    <p class="site-footer__text">&copy; 2026 Crossroads Community Hub. Feasibility study - Cameron Kibble. This document is an academic submission, not a commercial offering.</p>
+</footer>
+
+<script>
+/* Sidebar toggle + scroll-spy (self-contained, same pattern as proposal.html) */
+(function () {
+    var toggle = document.getElementById('sidebar-toggle');
+    var sidebar = document.getElementById('sidebar-nav');
+    if (!toggle || !sidebar) return;
+
+    toggle.addEventListener('click', function () {
+        var open = sidebar.classList.toggle('sidebar--open');
+        toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    var links = sidebar.querySelectorAll('.sidebar__link');
+    var sections = [];
+    links.forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ el: el, link: a });
+    });
+
+    var breadcrumbEl = document.getElementById('breadcrumb-section');
+
+    function updateActive() {
+        var scrollY = window.scrollY + 120;
+        var active = sections[0];
+        for (var i = 0; i < sections.length; i++) {
+            if (sections[i].el.offsetTop <= scrollY) active = sections[i];
+        }
+        links.forEach(function (a) {
+            a.classList.remove('sidebar__link--active');
+            a.removeAttribute('aria-current');
+        });
+        if (active) {
+            active.link.classList.add('sidebar__link--active');
+            active.link.setAttribute('aria-current', 'true');
+            if (breadcrumbEl) breadcrumbEl.textContent = active.link.textContent;
+        }
+    }
+
+    var raf;
+    window.addEventListener('scroll', function () {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(updateActive);
+    }, { passive: true });
+    updateActive();
+})();
+
+/* ---- Feasibility Charts (Plotly) ---- */
+(function () {
+    if (typeof Plotly === 'undefined') return;
+
+    var brandBlue = '#004a99';
+    var config = { responsive: true, displayModeBar: false };
+
+    /* Survey Results Horizontal Bar */
+    var surveyEl = document.getElementById('feasibility-survey-chart');
+    if (surveyEl) {
+        Plotly.newPlot(surveyEl, [{
+            type: 'bar',
+            orientation: 'h',
+            y: ['Lack of Access (Barrier)', 'Would Use Facility', 'Prefer $25-$50/mo', '3D Printing Interest', 'Software Dev Interest', 'Robotics Interest', 'Creative Design Interest', 'Prefer Evenings', 'Prefer Weekends'],
+            x: [78, 65, 61, 72, 58, 54, 41, 68, 59],
+            text: ['78%', '65%', '61%', '72%', '58%', '54%', '41%', '68%', '59%'],
+            textposition: 'outside',
+            marker: { color: [brandBlue, brandBlue, brandBlue, '#2563eb', '#2563eb', '#2563eb', '#2563eb', '#7c3aed', '#7c3aed'] },
+            hovertemplate: '%{y}: %{x}%<extra></extra>'
+        }], {
+            title: { text: 'Community Needs Survey Results (n=54)', font: { size: 14 } },
+            xaxis: { title: 'Percentage of Respondents', range: [0, 100], dtick: 20 },
+            yaxis: { automargin: true },
+            margin: { l: 180, r: 40, t: 50, b: 50 },
+            height: 380
+        }, config);
+    }
+
+    /* Cost Adjustment Waterfall */
+    var costEl = document.getElementById('feasibility-cost-chart');
+    if (costEl) {
+        Plotly.newPlot(costEl, [{
+            type: 'waterfall',
+            orientation: 'v',
+            x: ['Facility Ops', 'Personnel', 'Equipment', 'Legal/Insurance', 'Marketing', 'Dev Labor', 'Sinking Fund', 'Contingency', 'Total'],
+            y: [120000, 165000, 68000, 28000, 6000, 17000, 10000, 62100, 0],
+            measure: ['absolute', 'absolute', 'absolute', 'absolute', 'absolute', 'absolute', 'absolute', 'absolute', 'total'],
+            text: ['$120K', '$165K', '$68K', '$28K', '$6K', '$17K', '$10K', '$62.1K', '$476.1K'],
+            textposition: 'outside',
+            connector: { line: { color: '#ddd' } },
+            increasing: { marker: { color: brandBlue } },
+            totals: { marker: { color: '#059669' } },
+            hovertemplate: '%{x}: $%{y:,.0f}<extra></extra>'
+        }], {
+            title: { text: '2026 Adjusted Startup Costs (Lean Model)', font: { size: 14 } },
+            yaxis: { title: 'Amount ($)', tickformat: '$,.0f' },
+            xaxis: { tickangle: -30 },
+            margin: { l: 80, r: 30, t: 50, b: 80 },
+            height: 380,
+            showlegend: false
+        }, config);
+    }
+
+    /* Revenue Breakdown Bar */
+    var revEl = document.getElementById('feasibility-revenue-chart');
+    if (revEl) {
+        var sources = ['Memberships', 'Workshop Fees', 'Grants/Sponsors', 'Drop-in Passes', 'Corporate Training', 'Equip. Surcharges', 'Event Rental'];
+        var amounts = [8000, 8000, 8125, 3000, 3000, 2625, 1250];
+        Plotly.newPlot(revEl, [{
+            type: 'bar',
+            x: sources,
+            y: amounts,
+            text: amounts.map(function (v) { return '$' + v.toLocaleString(); }),
+            textposition: 'outside',
+            marker: { color: [brandBlue, '#2563eb', '#7c3aed', '#0891b2', '#059669', '#d97706', '#dc2626'] },
+            hovertemplate: '%{x}: $%{y:,.0f}/mo<extra></extra>'
+        }], {
+            title: { text: 'Monthly Revenue Streams (Pre-Adjustment Targets)', font: { size: 14 } },
+            yaxis: { title: 'Monthly Revenue ($)', tickformat: '$,.0f' },
+            xaxis: { tickangle: -25 },
+            margin: { l: 70, r: 30, t: 50, b: 90 },
+            height: 350,
+            showlegend: false
+        }, config);
+    }
+
+    /* Scenario Comparison Bar */
+    var scenarioEl = document.getElementById('feasibility-scenario-chart');
+    if (scenarioEl) {
+        Plotly.newPlot(scenarioEl, [
+            { type: 'bar', name: 'Monthly Revenue', x: ['Best-Case', 'Expected', 'Worst-Case'], y: [35000, 29000, 20000], marker: { color: '#059669' }, hovertemplate: '%{x}: $%{y:,.0f}<extra>Revenue</extra>' },
+            { type: 'bar', name: 'Monthly Cost', x: ['Best-Case', 'Expected', 'Worst-Case'], y: [24000, 25833, 28000], marker: { color: '#dc2626' }, hovertemplate: '%{x}: $%{y:,.0f}<extra>Cost</extra>' }
+        ], {
+            title: { text: 'Cost Sensitivity: Three Scenarios', font: { size: 14 } },
+            barmode: 'group',
+            yaxis: { title: 'Monthly Amount ($)', tickformat: '$,.0f' },
+            margin: { l: 70, r: 30, t: 50, b: 50 },
+            height: 320,
+            legend: { orientation: 'h', y: -0.15 }
+        }, config);
+    }
+})();
+</script>
+
+</body>
+</html>
