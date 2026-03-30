@@ -1,4 +1,4 @@
-test# Crossroads Community STEM Centre
+# Crossroads Community STEM Centre
 
 A proposal and feasibility study for an open-access community STEM learning hub in Langford, British Columbia, presented through a 3-page interactive website and supported by a Markdown-to-Word document converter.
 
