@@ -870,7 +870,7 @@
 })();
 
 /* ---- Feasibility Charts (Plotly) ---- */
-(function () {
+window.addEventListener('DOMContentLoaded', function () {
     if (typeof Plotly === 'undefined') return;
 
     var brandBlue = '#004a99';
@@ -960,7 +960,7 @@
             legend: { orientation: 'h', y: -0.15 }
         }, config);
     }
-})();
+});
 </script>
 
 </body>
